@@ -54,6 +54,17 @@ if has("gui_running")
     set background=light
     set guioptions-=T       " remove toolbar
     set guifont=Droid_Sans_Mono:h10
+    set nu                  " display string numbers
+
+    " Move to the next tab with Ctrl+Tab
+    map <C-Tab> :tabnext<CR>
+    nmap <C-Tab> :tabnext<CR>
+    imap <C-Tab> <Esc>:tabnext<CR>i
+
+    " Move to the previous tab with Ctrl+Shift+Tab
+    map <C-S-Tab> :tabprevious<CR>
+    nmap <C-S-Tab> :tabprevious<CR>
+    imap <C-S-Tab> <Esc>:tabprevious<CR>i
 endif
 
 set autoread                            " Reload files changed outside of vim
@@ -73,6 +84,8 @@ syntax on
 
 " Enable matchit plugin which ships with vim and greatly enhances '%'
 runtime macros/matchit.vim
+
+imap <C-Enter> <End><Enter>
 
 " Make keys work with cyrillic keyboard
 map ё `
