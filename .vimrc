@@ -82,9 +82,13 @@ set hlsearch                            " Highlight search results
 set wildmenu                            " Visualize autocompletion with <TAB>
 syntax on
 
+" Remove trailing spaces on saving file
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Enable matchit plugin which ships with vim and greatly enhances '%'
 runtime macros/matchit.vim
 
+" Start a new line in insert mode from any cursor position with Ctrl+Enter
 imap <C-Enter> <End><Enter>
 
 " Make keys work with cyrillic keyboard
