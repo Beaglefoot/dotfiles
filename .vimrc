@@ -37,10 +37,6 @@ if has("gui_running")
 
 
     " Syntastic settings
-    set statusline+=%#warningmsg#
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*
-
     let g:syntastic_always_populate_loc_list = 1
     let g:syntastic_auto_loc_list = 1
     let g:syntastic_check_on_open = 1
@@ -53,6 +49,8 @@ if has("gui_running")
     colorscheme solarized
     set background=light
     set guioptions-=T       " remove toolbar
+    set guioptions-=r       " remove right-hand scroll bar
+    set guioptions-=L       " remove left-hand scroll bar
     set guifont=Droid_Sans_Mono:h10
     set nu                  " display string numbers
 
