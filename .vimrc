@@ -63,6 +63,8 @@ if has("gui_running")
     map <C-S-Tab> :tabprevious<CR>
     nmap <C-S-Tab> :tabprevious<CR>
     imap <C-S-Tab> <Esc>:tabprevious<CR>i
+else
+    colorscheme base16-monokai
 endif
 
 set autoread                            " Reload files changed outside of vim
