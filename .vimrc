@@ -51,7 +51,7 @@ if has("gui_running")
     set guioptions-=T       " remove toolbar
     set guioptions-=r       " remove right-hand scroll bar
     set guioptions-=L       " remove left-hand scroll bar
-    set guifont=Droid_Sans_Mono:h10
+    set guifont=Droid_Sans_Mono:h11
     set nu                  " display string numbers
 
     " Move to the next tab with Ctrl+Tab
@@ -86,7 +86,7 @@ syntax on
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set different shiftwidth and tabstop on '.js' files
-autocmd BufRead,BufNewFile *.js set tabstop=2 shiftwidth=2
+autocmd FileType javascript set tabstop=2 shiftwidth=2 cinoptions=j1,J1
 
 " Enable matchit plugin which ships with vim and greatly enhances '%'
 runtime macros/matchit.vim
