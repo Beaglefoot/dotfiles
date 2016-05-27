@@ -19,6 +19,7 @@ if has("gui_running")
     Plugin 'skammer/vim-css-color'
     Plugin 'Shutnik/jshint2.vim'
     Plugin 'scrooloose/syntastic'
+    Plugin 'digitaltoad/vim-pug'
 
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
@@ -86,7 +87,7 @@ syntax on
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set different shiftwidth and tabstop on '.js' files
-autocmd FileType javascript set tabstop=2 shiftwidth=2 cinoptions=j1,J1
+autocmd BufRead,BufNewFile *.js set tabstop=2 shiftwidth=2
 
 " Enable matchit plugin which ships with vim and greatly enhances '%'
 runtime macros/matchit.vim
