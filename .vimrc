@@ -47,6 +47,8 @@ if has("gui_running")
     " Set window size, colors, font and hide unnecessary gui in gVim
     set lines=45
     set columns=150
+    let g:solarized_italic=0
+    let g:solarized_bold=0
     colorscheme solarized
     set background=light
     set guioptions-=T       " remove toolbar
