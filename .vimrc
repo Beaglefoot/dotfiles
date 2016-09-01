@@ -54,7 +54,8 @@ if has("gui_running")
     set guioptions-=T       " remove toolbar
     set guioptions-=r       " remove right-hand scroll bar
     set guioptions-=L       " remove left-hand scroll bar
-    set guifont=Droid_Sans_Mono:h11
+    "set guifont=Droid_Sans_Mono:h11
+    set guifont=Source_Code_Pro:h12
     set nu                  " display string numbers
 
     " Move to the next tab with Ctrl+Tab
@@ -96,6 +97,16 @@ runtime macros/matchit.vim
 
 " Start a new line in insert mode from any cursor position with Ctrl+Enter
 imap <C-Enter> <End><Enter>
+
+" Move cursor at the first symbol of string with Ctrl+Up
+map <C-Up> ^
+nmap <C-Up> ^
+imap <C-Up> <Esc>^i
+"
+" Move cursor at the last symbol of string with Ctrl+Down
+map <C-Down> $
+nmap <C-Down> $
+imap <C-Down> <Esc>$i
 
 " Make keys work with cyrillic keyboard
 map ё `

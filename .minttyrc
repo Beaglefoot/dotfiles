@@ -4,14 +4,12 @@ Rows=55
 FontHeight=10
 CursorType=block
 Font=Lucida Console
-
 ForegroundColour=210,210,210
 CursorColour=253,157,79
 Black=39,40,34
 BoldBlack=117,113,94
 Red=249,38,114
 BoldRed=204,6,78
-#Green=166,226,46
 Green=171,255,0
 BoldGreen=150,225,10
 Yellow=255,230,0
