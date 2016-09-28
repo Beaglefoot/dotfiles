@@ -18,6 +18,7 @@ if has("gui_running")
     Plugin 'mattn/emmet-vim'
     Plugin 'skammer/vim-css-color'
     Plugin 'Shutnik/jshint2.vim'
+    Plugin 'pangloss/vim-javascript'
     Plugin 'scrooloose/syntastic'
     Plugin 'digitaltoad/vim-pug'
 
@@ -54,7 +55,6 @@ if has("gui_running")
     set guioptions-=T       " remove toolbar
     set guioptions-=r       " remove right-hand scroll bar
     set guioptions-=L       " remove left-hand scroll bar
-    "set guifont=Droid_Sans_Mono:h11
     set guifont=Source_Code_Pro:h12
     set nu                  " display string numbers
 
