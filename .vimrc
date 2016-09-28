@@ -1,50 +1,51 @@
 set nocompatible                " Make vim incompatible with the old vi-mode
 
+" Vundle Settings
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
 if has("gui_running")
-    " Vundle Settings
-    filetype off                  " required
-
-    " set the runtime path to include Vundle and initialize
     set rtp+=$VIM/bundle/Vundle.vim
-    call vundle#begin()
-    " alternatively, pass a path where Vundle should install plugins
-    "call vundle#begin('~/some/path/here')
+else
+    set rtp+=~/.vim/bundle/Vundle.vim
+endif
 
-    " let Vundle manage Vundle, required
-    Plugin 'VundleVim/Vundle.vim'
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-    " Define plugins
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Define plugins
+Plugin 'mattn/emmet-vim'
+Plugin 'skammer/vim-css-color'
+Plugin 'Shutnik/jshint2.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'scrooloose/syntastic'
+Plugin 'digitaltoad/vim-pug'
+if has("gui_running")
     Plugin 'altercation/vim-colors-solarized'
-    Plugin 'mattn/emmet-vim'
-    Plugin 'skammer/vim-css-color'
-    Plugin 'Shutnik/jshint2.vim'
-    Plugin 'pangloss/vim-javascript'
-    Plugin 'scrooloose/syntastic'
-    Plugin 'digitaltoad/vim-pug'
+endif
 
-    " All of your Plugins must be added before the following line
-    call vundle#end()            " required
-    filetype plugin indent on    " required
-    " To ignore plugin indent changes, instead use:
-    "filetype plugin on
-    "
-    " Brief help
-    " :PluginList       - lists configured plugins
-    " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-    " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-    " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-    "
-    " see :h vundle for more details or wiki for FAQ
-    " Put your non-Plugin stuff after this line
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 
-    " Syntastic settings
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
 
-
+if has("gui_running")
     " Set window size, colors, font and hide unnecessary gui in gVim
     set lines=45
     set columns=150
@@ -70,6 +71,16 @@ if has("gui_running")
 else
     colorscheme base16-monokai
 endif
+
+
+
+" Syntastic settings
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+
 
 set autoread                            " Reload files changed outside of vim
 set nobackup                            " Remove the .ext~ files, but not the swapfiles
