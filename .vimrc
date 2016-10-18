@@ -101,7 +101,7 @@ syntax on
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set different shiftwidth and tabstop on '.js' files
-autocmd BufRead,BufNewFile *.js set tabstop=2 shiftwidth=2
+autocmd BufRead,BufNewFile *.js,*.json,*.html,*.css,*.pug set tabstop=2 shiftwidth=2
 
 " Enable matchit plugin which ships with vim and greatly enhances '%'
 runtime macros/matchit.vim
