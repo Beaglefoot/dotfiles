@@ -19,6 +19,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Define plugins
 Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-surround'
 Plugin 'skammer/vim-css-color'
 Plugin 'Shutnik/jshint2.vim'
 Plugin 'pangloss/vim-javascript'
