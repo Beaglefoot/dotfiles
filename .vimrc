@@ -61,6 +61,13 @@ if has("gui_running")
     set guifont=Source_Code_Pro:h12
     set nu                  " display string numbers
 
+    " Open NERDTree on start up
+    autocmd vimenter * NERDTree
+
+    " Change default NERDTree arrows
+    let g:NERDTreeDirArrowExpandable = '▸'
+    let g:NERDTreeDirArrowCollapsible = '▾'
+
     " Move to the next tab with Ctrl+Tab
     map <C-Tab> :tabnext<CR>
     nmap <C-Tab> :tabnext<CR>
