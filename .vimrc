@@ -28,6 +28,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'digitaltoad/vim-pug'
 if has("gui_running")
     Plugin 'altercation/vim-colors-solarized'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
 endif
 
 " All of your Plugins must be added before the following line
@@ -58,7 +60,8 @@ if has("gui_running")
     set guioptions-=T       " remove toolbar
     set guioptions-=r       " remove right-hand scroll bar
     set guioptions-=L       " remove left-hand scroll bar
-    set guifont=Source_Code_Pro:h12
+    set guifont=Source_Code_Pro:h12,PowerlineSymbols:h12
+    let g:airline_powerline_fonts=1
     set nu                  " display string numbers
 
     " Open NERDTree on start up
