@@ -22,7 +22,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'skammer/vim-css-color'
-Plugin 'Shutnik/jshint2.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/syntastic'
 Plugin 'digitaltoad/vim-pug'
@@ -90,7 +89,8 @@ endif
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_javascript_checkers = ['eslint']
 
 
 
@@ -113,7 +113,7 @@ syntax on
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set different shiftwidth and tabstop on '.js' files
-autocmd BufRead,BufNewFile *.js,*.json,*.html,*.css,*.pug set tabstop=2 shiftwidth=2
+autocmd BufRead,BufNewFile *.js,*.jsx,*.json,*.html,*.css,*.scss,*.sass,*.pug set tabstop=2 shiftwidth=2
 
 " Enable matchit plugin which ships with vim and greatly enhances '%'
 runtime macros/matchit.vim
