@@ -25,6 +25,7 @@ Plugin 'skammer/vim-css-color'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/syntastic'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'mxw/vim-jsx'
 if has("gui_running")
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'vim-airline/vim-airline'
@@ -92,6 +93,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 
+" Make JSX syntax independent of .jsx extension
+let g:jsx_ext_required = 0
 
 
 set autoread                            " Reload files changed outside of vim
