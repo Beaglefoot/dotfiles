@@ -25,6 +25,7 @@
     },
     "root": true,
     "rules": {
+        "no-console": "off",
         "indent": ["error", 2],
         "eqeqeq": 1,
         "quotes": ["error", "single"],
