@@ -26,6 +26,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/syntastic'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'mxw/vim-jsx'
+Plugin 'godlygeek/tabular'
 if has("gui_running")
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'vim-airline/vim-airline'
