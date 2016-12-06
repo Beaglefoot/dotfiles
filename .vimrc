@@ -138,3 +138,8 @@ imap <C-Up> <Esc>^i
 map <C-Down> $
 nmap <C-Down> $
 imap <C-Down> <Esc>$i
+
+" Shortcut for commenting
+map <C-H> :TComment<CR>
+nmap <C-H> :TComment<CR>
+imap <C-H> <Esc>:TComment<CR>li
