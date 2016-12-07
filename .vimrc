@@ -143,3 +143,10 @@ imap <C-Down> <Esc>$i
 map <C-H> :TComment<CR>
 nmap <C-H> :TComment<CR>
 imap <C-H> <Esc>:TComment<CR>li
+
+" Emmet JSX syntax support
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends' : 'jsx',
+\  },
+\}
