@@ -104,6 +104,7 @@ let g:jsx_ext_required = 0
 
 set autoread                            " Reload files changed outside of vim
 set nobackup                            " Remove the .ext~ files, but not the swapfiles
+set backupcopy=yes                      " Make vim compatible with webpack watching mechanism
 set backspace=indent,eol,start          " Make backspace delete line breaks and auto-indentation
 set encoding=utf-8
 set fileencoding=utf-8
