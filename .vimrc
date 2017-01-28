@@ -75,6 +75,8 @@ if has("gui_running")
     let g:NERDTreeDirArrowExpandable = '▸'
     let g:NERDTreeDirArrowCollapsible = '▾'
 
+    let g:NERDTreeIgnore = ['node_modules']
+
     " Move to the next tab with Ctrl+Tab
     map <C-Tab> :tabnext<CR>
     nmap <C-Tab> :tabnext<CR>
