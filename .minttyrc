@@ -1,6 +1,6 @@
 BoldAsFont=no
 Columns=142
-Rows=55
+Rows=50
 FontHeight=10
 CursorType=block
 Font=Lucida Console
@@ -23,3 +23,4 @@ BoldCyan=95,227,210
 White=248,248,242
 BoldWhite=249,248,245
 BackgroundColour=40,40,40
+Scrollbar=none
