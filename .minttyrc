@@ -24,3 +24,4 @@ White=248,248,242
 BoldWhite=249,248,245
 BackgroundColour=40,40,40
 Scrollbar=none
+BellType=0
