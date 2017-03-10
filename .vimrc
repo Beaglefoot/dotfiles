@@ -19,6 +19,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Define plugins
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'skammer/vim-css-color'
