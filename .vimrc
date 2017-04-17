@@ -55,9 +55,10 @@ filetype plugin indent on    " required
 
 
 if has("gui_running")
-    " Set window size, colors, font and hide unnecessary gui in gVim
-    set lines=45
-    set columns=150
+    " Maximize gVim window on startup
+    au GUIEnter * simalt ~x
+
+    " Set colors, font and hide unnecessary gui in gVim
     let g:solarized_italic=0
     let g:solarized_bold=0
     colorscheme solarized
