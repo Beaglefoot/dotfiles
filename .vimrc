@@ -151,6 +151,9 @@ map <C-H> :TComment<CR>
 nmap <C-H> :TComment<CR>
 imap <C-H> <Esc>:TComment<CR>li
 
+" Disable search highlighting with doulbe Esc
+nnoremap <Esc><Esc> :noh<CR>
+
 " Emmet JSX syntax support
 let g:user_emmet_settings = {
 \  'javascript.jsx' : {
