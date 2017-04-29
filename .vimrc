@@ -154,6 +154,9 @@ imap <C-H> <Esc>:TComment<CR>li
 " Disable search highlighting with doulbe Esc
 nnoremap <Esc><Esc> :noh<CR>
 
+" Toggle NERDTree panel
+nnoremap <F11> :NERDTreeToggle<CR>
+
 " Emmet JSX syntax support
 let g:user_emmet_settings = {
 \  'javascript.jsx' : {
