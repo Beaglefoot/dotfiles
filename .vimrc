@@ -31,6 +31,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'othree/html5.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'hail2u/vim-css3-syntax'
 if has("gui_running")
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'vim-airline/vim-airline'
