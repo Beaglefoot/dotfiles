@@ -153,7 +153,7 @@ nmap <C-H> :TComment<CR>
 imap <C-H> <Esc>:TComment<CR>li
 
 " Disable search highlighting with doulbe Esc
-nnoremap <Esc><Esc> :noh<CR>
+nnoremap <F3> :noh<CR>
 
 " Toggle NERDTree panel
 nnoremap <F11> :NERDTreeToggle<CR>
