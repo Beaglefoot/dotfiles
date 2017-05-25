@@ -13,3 +13,5 @@ In windows run cmd as administrator:
     /J – creates a hard link to a directory or folder
 
 Don't foget to install [PowerlineSymbols.otf](https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf) for airline plugin.
+
+Source Code Pro font should be installed from [here](https://github.com/adobe-fonts/source-code-pro)
