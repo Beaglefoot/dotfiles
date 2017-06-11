@@ -32,11 +32,9 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'othree/html5.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'hail2u/vim-css3-syntax'
-if has("gui_running")
-    Plugin 'altercation/vim-colors-solarized'
-    Plugin 'vim-airline/vim-airline'
-    Plugin 'vim-airline/vim-airline-themes'
-endif
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,8 +54,10 @@ filetype plugin indent on    " required
 
 
 if has("gui_running")
-    " Maximize gVim window on startup
-    au GUIEnter * simalt ~x
+    if has("gui_win32")
+        " Maximize gVim window on startup
+        au GUIEnter * simalt ~x
+    endif
 
     " Set colors, font and hide unnecessary gui in gVim
     let g:solarized_italic=0
