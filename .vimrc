@@ -4,7 +4,7 @@ set nocompatible                " Make vim incompatible with the old vi-mode
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-if has("gui_running")
+if has("gui_running") && has("gui_win32")
     set rtp+=$VIM/bundle/Vundle.vim
 else
     set rtp+=~/.vim/bundle/Vundle.vim
