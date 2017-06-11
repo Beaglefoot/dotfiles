@@ -64,11 +64,18 @@ if has("gui_running")
     let g:solarized_bold=0
     colorscheme solarized
     set background=light
+
     set guioptions-=T       " remove toolbar
     set guioptions-=r       " remove right-hand scroll bar
     set guioptions-=L       " remove left-hand scroll bar
     set guioptions-=t       " remove tearoff menu items
-    set guifont=Source_Code_Pro:h12,PowerlineSymbols:h12
+
+    if has("gui_win32")
+        set guifont=Source_Code_Pro:h12,PowerlineSymbols
+    else
+        set guifont=SourceCodePro\ 12,PowerlineSymbols
+    endif
+
     let g:airline_powerline_fonts=1
     set nu                  " display string numbers
 
