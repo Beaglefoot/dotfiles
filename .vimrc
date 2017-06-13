@@ -32,6 +32,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'othree/html5.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'hail2u/vim-css3-syntax'
+Plugin 'wavded/vim-stylus'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -56,7 +57,8 @@ filetype plugin indent on    " required
 if has("gui_running")
     if has("gui_win32")
         " Maximize gVim window on startup
-        au GUIEnter * simalt ~x
+        " au GUIEnter * simalt ~x
+        set lines=999 columns=999
     endif
 
     " Set colors, font and hide unnecessary gui in gVim
@@ -136,7 +138,8 @@ syntax on
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set different shiftwidth and tabstop on '.js' files
-autocmd BufRead,BufNewFile *.js,*.jsx,*.json,*.html,*.css,*.scss,*.sass,*.pug set tabstop=2 shiftwidth=2
+autocmd BufRead,BufNewFile *.js,*.jsx,*.json,*.html,*.css,*.scss,*.sass,*.pug,*.styl set tabstop=2 shiftwidth=2
+
 
 " Enable matchit plugin which ships with vim and greatly enhances '%'
 runtime macros/matchit.vim
