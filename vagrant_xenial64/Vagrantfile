@@ -79,6 +79,8 @@ Vagrant.configure("2") do |config|
     apt-get install -y nodejs
     npm completion >> ~/.bashrc
     npm install -g babel-eslint dumper eslint eslint-plugin-import eslint-plugin-react gulp js-beautify webpack webpack-dev-server yarn
-    apt-get install -y ubuntu-desktop vim-gtk3 virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
+    apt-get install -y ubuntu-desktop vim-gtk virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
+    apt-get purge -y libreoffice* rhythmbox gnome-bluetooth gnome-mahjongg gnome-mines gnome-sudoku thunderbird thunderbird-gnome-support totem
+    apt-get autoremove -y --purge
   SHELL
 end
