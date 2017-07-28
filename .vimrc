@@ -57,7 +57,8 @@ filetype plugin indent on    " required
 if has("gui_running")
     if has("gui_win32")
         " Maximize gVim window on startup
-        " au GUIEnter * simalt ~x
+        au GUIEnter * simalt ~x
+    else
         set lines=999 columns=999
     endif
 
