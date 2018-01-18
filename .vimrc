@@ -102,7 +102,7 @@ if has("gui_running")
     nmap <C-S-Tab> :tabprevious<CR>
     imap <C-S-Tab> <Esc>:tabprevious<CR>i
 else
-    colorscheme base16-monokai
+    " colorscheme base16-monokai
 endif
 
 
