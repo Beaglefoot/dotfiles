@@ -57,11 +57,12 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
     vb.gui = true
+    vb.customize ["modifyvm", :id, "--vram", "32"]
 
     # Customize the amount of memory on the VM:
-    vb.memory = "4096"
+    vb.memory = "2048"
 
-    vb.cpus = 2
+    vb.cpus = 1
   end
 
   # View the documentation for the provider you are using for more
@@ -81,7 +82,7 @@ Vagrant.configure("2") do |config|
     curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
     apt-get update
-    apt-get install -y nodejs vim vim-gtk git tmux xubuntu-desktop virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
+    apt-get install -y nodejs vim vim-gtk git tmux ubuntu-make xubuntu-desktop virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
     npm install -g babel-eslint dumper eslint eslint-plugin-import eslint-plugin-react gulp js-beautify webpack webpack-dev-server yarn nodemon browser-sync serve
 
     apt-get autoremove -y --purge
