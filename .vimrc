@@ -37,6 +37,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -176,3 +177,10 @@ let g:user_emmet_settings = {
 \      'extends' : 'jsx',
 \  },
 \}
+
+" Ignore patterns mostly for ctrlp plugin
+if has("gui_win32")
+    set wildignore+=*\\tmp\\*,*\\node_modules\\*,*.swp,*.zip,*.exe,
+else
+    set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip
+endif
