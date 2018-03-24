@@ -189,3 +189,6 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+# Make gvim accessible with cygwin
+[[ $OS =~ 'Windows' ]] && PATH=$PATH:/cygdrive/c/Program\ Files\ \(x86\)/Vim/vim80/
