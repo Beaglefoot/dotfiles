@@ -38,6 +38,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'prettier/vim-prettier'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -86,6 +87,7 @@ if has("gui_running")
 
     " Open NERDTree on start up
     autocmd vimenter * NERDTree
+    autocmd vimenter * wincmd l
 
     " Change default NERDTree arrows
     let g:NERDTreeDirArrowExpandable = '▸'
@@ -184,3 +186,7 @@ if has("gui_win32")
 else
     set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip
 endif
+
+" Autorun Prettier on saving file
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.css,*.scss,*.less Prettier
