@@ -76,6 +76,7 @@ if has("gui_running")
     set guioptions-=r       " remove right-hand scroll bar
     set guioptions-=L       " remove left-hand scroll bar
     set guioptions-=t       " remove tearoff menu items
+    set guioptions-=m       " remove menu bar
 
     if has("gui_win32")
         set guifont=Source_Code_Pro:h12,PowerlineSymbols
@@ -105,6 +106,9 @@ if has("gui_running")
     map <C-S-Tab> :tabprevious<CR>
     nmap <C-S-Tab> :tabprevious<CR>
     imap <C-S-Tab> <Esc>:tabprevious<CR>i
+
+    " Tabs naming
+    set guitablabel=%N)\ %h%t\ %M
 else
     " colorscheme base16-monokai
 endif
