@@ -88,8 +88,10 @@ if has("gui_running")
     set nu                  " display string numbers
 
     " Open NERDTree on start up
-    autocmd vimenter * NERDTree
-    autocmd vimenter * wincmd l
+    autocmd vimenter * NERDTree| wincmd p
+
+    " Highlight opened file in NERDTree
+    autocmd BufRead * NERDTreeFind| wincmd p
 
     " Change default NERDTree arrows
     let g:NERDTreeDirArrowExpandable = '▸'
