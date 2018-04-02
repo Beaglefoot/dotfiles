@@ -1,3 +1,5 @@
+const osIsWindows = (process.env.OS || '').includes('Windows');
+
 export const activate = oni => {
   console.log('config activated');
 
@@ -5,13 +7,17 @@ export const activate = oni => {
   oni.input.unbind('<c-tab>');
   oni.input.unbind('<c-pageup>');
   oni.input.unbind('<c-pagedown>');
-  oni.input.unbind('<c-p>');
   oni.input.unbind('<f3>');
 
   // oni.input.bind('<c-enter>', () => console.log('Control+Enter was pressed'));
   // oni.input.bind('<a-c-i>', 'language.format');
-  oni.input.bind('<c-p>', 'contextMenu.previous');
-  oni.input.bind('<c-p>', 'menu.previous');
+
+  // Workaround with Ctrl+P
+  if (osIsWindows) {
+    oni.input.unbind('<c-p>');
+    oni.input.bind('<c-p>', 'contextMenu.previous');
+    oni.input.bind('<c-p>', 'menu.previous');
+  }
 };
 
 export const deactivate = oni => {
@@ -35,7 +41,7 @@ export const configuration = {
 
   //"oni.useDefaultConfig": true,
   //"oni.bookmarks": ["~/Documents"],
-  'oni.loadInitVim': (process.env.OS || '').includes('Windows')
+  'oni.loadInitVim': osIsWindows
     ? `${getCygwinPath()}\\home\\${process.env.USERNAME}\\.oni\\oni.vim`
     : `${process.env.HOME}/.oni/oni.vim`,
   'editor.fontSize': '14px',
