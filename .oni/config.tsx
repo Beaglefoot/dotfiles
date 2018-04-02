@@ -1,7 +1,4 @@
-import * as React from 'C:\\Program Files (x86)\\Oni\\resources\\app\\node_modules\\react';
-import * as Oni from 'C:\\Program Files (x86)\\Oni\\resources\\app\\node_modules\\oni-api';
-
-export const activate = (oni: Oni.Plugin.Api) => {
+export const activate = oni => {
   console.log('config activated');
 
   // Input
@@ -17,7 +14,7 @@ export const activate = (oni: Oni.Plugin.Api) => {
   oni.input.bind('<c-p>', 'menu.previous');
 };
 
-export const deactivate = (oni: Oni.Plugin.Api) => {
+export const deactivate = oni => {
   console.log('config deactivated');
 };
 
@@ -38,9 +35,9 @@ export const configuration = {
 
   //"oni.useDefaultConfig": true,
   //"oni.bookmarks": ["~/Documents"],
-  'oni.loadInitVim': process.env.OS.includes('Windows')
+  'oni.loadInitVim': (process.env.OS || '').includes('Windows')
     ? `${getCygwinPath()}\\home\\${process.env.USERNAME}\\.oni\\oni.vim`
-    : '~/.oni/oni.vim',
+    : `${process.env.HOME}/.oni/oni.vim`,
   'editor.fontSize': '14px',
   'editor.fontFamily': 'Source Code Pro',
   'editor.maximizeScreenOnStart': true,
