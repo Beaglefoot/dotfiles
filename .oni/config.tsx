@@ -8,6 +8,8 @@ export const activate = oni => {
   oni.input.unbind('<c-pageup>');
   oni.input.unbind('<c-pagedown>');
   oni.input.unbind('<f3>');
+  oni.input.unbind('<c-t>');
+  oni.input.unbind('<delete>');
 
   // oni.input.bind('<c-enter>', () => console.log('Control+Enter was pressed'));
   // oni.input.bind('<a-c-i>', 'language.format');
