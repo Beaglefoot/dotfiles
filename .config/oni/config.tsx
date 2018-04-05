@@ -44,8 +44,8 @@ export const configuration = {
   //"oni.useDefaultConfig": true,
   //"oni.bookmarks": ["~/Documents"],
   'oni.loadInitVim': osIsWindows
-    ? `${getCygwinPath()}\\home\\${process.env.USERNAME}\\.oni\\oni.vim`
-    : `${process.env.HOME}/.oni/oni.vim`,
+    ? `${getCygwinPath()}\\home\\${process.env.USERNAME}\\.config\\oni\\oni.vim`
+    : `${process.env.HOME}/.config/oni/oni.vim`,
   'editor.fontSize': '14px',
   'editor.fontFamily': 'Source Code Pro',
   'editor.maximizeScreenOnStart': true,
