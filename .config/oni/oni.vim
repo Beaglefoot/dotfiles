@@ -20,7 +20,6 @@ Plugin 'godlygeek/tabular'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'othree/html5.vim'
 Plugin 'hail2u/vim-css3-syntax'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'prettier/vim-prettier'
 
 " All of your Plugins must be added before the following line

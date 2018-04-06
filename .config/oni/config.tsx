@@ -13,13 +13,6 @@ export const activate = oni => {
 
   // oni.input.bind('<c-enter>', () => console.log('Control+Enter was pressed'));
   // oni.input.bind('<a-c-i>', 'language.format');
-
-  // Workaround with Ctrl+P
-  if (osIsWindows) {
-    oni.input.unbind('<c-p>');
-    oni.input.bind('<c-p>', 'contextMenu.previous');
-    oni.input.bind('<c-p>', 'menu.previous');
-  }
 };
 
 export const deactivate = oni => {
