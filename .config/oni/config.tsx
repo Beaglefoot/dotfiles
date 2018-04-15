@@ -32,13 +32,20 @@ const getCygwinPath = () =>
     .join('\\');
 
 export const configuration = {
-  'ui.colorscheme': 'nord',
+  'ui.colorscheme': 'solarized8_light',
+  'colors.background': '#EEE8D5',
+  'colors.highlight.mode.normal.background': '#268BD2',
+  'colors.highlight.mode.visual.background': '#D33682',
+  'colors.highlight.mode.insert.background': '#2AA198',
+  'colors.highlight.mode.operator.background': '#CB4B16',
+  'colors.editor.hover.title.background': '#FDF6E3',
 
   //"oni.useDefaultConfig": true,
   //"oni.bookmarks": ["~/Documents"],
   'oni.loadInitVim': osIsWindows
     ? `${getCygwinPath()}\\home\\${process.env.USERNAME}\\.config\\oni\\oni.vim`
     : `${process.env.HOME}/.config/oni/oni.vim`,
+  'oni.hideMenu': true,
   'editor.fontSize': '14px',
   'editor.fontFamily': 'Source Code Pro',
   'editor.maximizeScreenOnStart': true,
@@ -47,5 +54,5 @@ export const configuration = {
   'ui.animations.enabled': true,
   'ui.fontSmoothing': 'auto',
 
-  'statusbar.fontSize': '13px',
+  'statusbar.fontSize': '13px'
 };

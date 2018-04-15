@@ -3,7 +3,7 @@
 curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
 apt-get update
-apt-get install -y nodejs vim vim-gtk git tmux gpick shutter
+apt-get install -y nodejs vim vim-gtk git tmux gpick shutter libgoo-canvas-perl
 
 npm install -g dumper js-beautify webpack webpack-dev-server yarn nodemon browser-sync serve
 
