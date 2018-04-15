@@ -58,6 +58,8 @@ filetype plugin indent on    " required
 
 
 
+set background=light
+
 if has("gui_running")
     if has("gui_win32")
         " Maximize gVim window on startup
@@ -70,7 +72,6 @@ if has("gui_running")
     let g:solarized_italic=0
     let g:solarized_bold=0
     colorscheme solarized
-    set background=light
 
     set guioptions-=T       " remove toolbar
     set guioptions-=r       " remove right-hand scroll bar
