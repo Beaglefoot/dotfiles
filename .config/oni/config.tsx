@@ -54,5 +54,16 @@ export const configuration = {
   'ui.animations.enabled': true,
   'ui.fontSmoothing': 'auto',
 
-  'statusbar.fontSize': '13px'
+  'statusbar.fontSize': '13px',
 };
+
+const intervalID = setInterval(() => {
+  const faBoltIcon = document.getElementsByClassName('fa-bolt')[0];
+
+  if (faBoltIcon) {
+    clearInterval(intervalID);
+    const fileTypeElement = faBoltIcon.parentNode.parentNode;
+    fileTypeElement.style.backgroundColor = '#839496';
+    fileTypeElement.style.color = '#EEE8D5';
+  }
+}, 50);
