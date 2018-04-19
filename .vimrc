@@ -113,6 +113,7 @@ if has("gui_running")
     " Tabs naming
     set guitablabel=%N)\ %h%t\ %M
 else
+    set t_Co=16
     " colorscheme base16-monokai
 endif
 
