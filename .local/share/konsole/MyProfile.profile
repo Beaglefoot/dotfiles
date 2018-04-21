@@ -4,7 +4,7 @@ ColorScheme=alternatedMonokai
 Font=Noto Mono,11.5,-1,0,50,0,0,0,0,0
 
 [General]
-Environment=TERM=xterm-color
+Environment=TERM=xterm-256color
 Name=MyProfile
 Parent=FALLBACK/
 
