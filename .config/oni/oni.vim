@@ -83,3 +83,7 @@ endif
 " Autorun Prettier on saving file
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.scss,*.less Prettier
+
+" Workaround for autoread
+set autoread
+au FocusGained * :checktime
