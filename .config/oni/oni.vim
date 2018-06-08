@@ -42,7 +42,7 @@ imap <C-S-Tab> <Esc>:tabprevious<CR>i
 
 
 " Set different shiftwidth and tabstop on '.js' files
-autocmd BufRead,BufNewFile *.js,*.jsx,*.ts.,*.tsx,*.json,*.html,*.css,*.scss,*.sass,*.pug,*.styl set tabstop=2 shiftwidth=2
+autocmd BufRead,BufNewFile *.js,*.jsx,*.ts,*.tsx,*.json,*.html,*.css,*.scss,*.sass,*.pug,*.styl set tabstop=2 shiftwidth=2
 
 
 " Enable matchit plugin which ships with vim and greatly enhances '%'
