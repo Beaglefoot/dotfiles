@@ -27,18 +27,23 @@ const getCygwinPath = () =>
     .reduce(
       (path, str) =>
         path.some(str => str.includes('cygwin')) ? path : path.concat(str),
-      [],
+      []
     )
     .join('\\');
 
 export const configuration = {
   'ui.colorscheme': 'solarized8_light',
   'colors.background': '#EEE8D5',
+  'colors.editor.background': '#FDF6E3',
   'colors.highlight.mode.normal.background': '#268BD2',
   'colors.highlight.mode.visual.background': '#D33682',
   'colors.highlight.mode.insert.background': '#2AA198',
   'colors.highlight.mode.operator.background': '#CB4B16',
   'colors.editor.hover.title.background': '#FDF6E3',
+  'colors.menu.background': '#EEE8D5',
+  'colors.menu.foreground': '#586E75',
+  'colors.toolTip.background': '#FDF6E3',
+  'colors.sidebar.foreground': '#657B83',
 
   //"oni.useDefaultConfig": true,
   //"oni.bookmarks": ["~/Documents"],
@@ -54,16 +59,34 @@ export const configuration = {
   'ui.animations.enabled': true,
   'ui.fontSmoothing': 'auto',
 
-  'statusbar.fontSize': '13px',
+  'statusbar.fontSize': '13px'
+};
+
+const repaintSurroundingContainer = ({
+  icon,
+  foregroundColor,
+  backgroundColor
+}) => {
+  const container = icon.parentNode.parentNode;
+  container.style.backgroundColor = backgroundColor;
+  container.style.color = foregroundColor;
 };
 
 const intervalID = setInterval(() => {
   const faBoltIcon = document.getElementsByClassName('fa-bolt')[0];
+  const faMagicIcon = document.getElementsByClassName('fa-magic')[0];
 
-  if (faBoltIcon) {
+  if (faBoltIcon && faMagicIcon) {
     clearInterval(intervalID);
-    const fileTypeElement = faBoltIcon.parentNode.parentNode;
-    fileTypeElement.style.backgroundColor = '#839496';
-    fileTypeElement.style.color = '#EEE8D5';
+    repaintSurroundingContainer({
+      icon: faBoltIcon,
+      backgroundColor: '#839496',
+      foregroundColor: '#EEE8D5'
+    });
+    repaintSurroundingContainer({
+      icon: faMagicIcon,
+      backgroundColor: '#839496',
+      foregroundColor: '#EEE8D5'
+    });
   }
 }, 50);
