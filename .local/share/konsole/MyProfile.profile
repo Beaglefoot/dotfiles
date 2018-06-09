@@ -1,7 +1,7 @@
 [Appearance]
 BoldIntense=true
 ColorScheme=alternatedMonokai
-Font=Noto Mono,11.5,-1,0,50,0,0,0,0,0
+Font=Hack,11,-1,5,50,0,0,0,0,0,Regular
 
 [General]
 Environment=TERM=xterm-256color
