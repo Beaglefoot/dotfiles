@@ -46,6 +46,8 @@ export const configuration = {
   'colors.menu.foreground': '#586E75',
   'colors.toolTip.background': '#FDF6E3',
   'colors.sidebar.foreground': '#657B83',
+  'colors.editor.hover.contents.background': '#3F4652',
+  'colors.editor.hover.contents.foreground': '#B4BEBE',
 
   //"oni.useDefaultConfig": true,
   //"oni.bookmarks": ["~/Documents"],
