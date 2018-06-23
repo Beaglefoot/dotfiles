@@ -1,3 +1,5 @@
+declare const process: any;
+
 const osIsWindows = (process.env.OS || '').includes('Windows');
 
 export const activate = oni => {
