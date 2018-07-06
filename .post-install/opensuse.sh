@@ -1,9 +1,12 @@
 #!/bin/bash
 
 zypper refresh
-zypper install -yl --no-recommends nodejs8 vim gvim neovim git tmux gpick
+zypper install -yl --no-recommends nodejs8 vim gvim neovim git tmux gpick opera
 
-npm install -g dumper js-beautify yarn nodemon browser-sync serve typescript opera
+npm install -g dumper js-beautify yarn nodemon browser-sync serve typescript
+
+pip install --upgrade pip setuptools
+pip install --upgrade httpie
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 

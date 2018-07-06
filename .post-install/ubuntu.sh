@@ -3,9 +3,9 @@
 curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
 apt-get update
-apt-get install -y nodejs vim vim-gtk git tmux gpick shutter libgoo-canvas-perl libnotify-bin
+apt-get install -y nodejs vim vim-gtk git tmux gpick shutter libgoo-canvas-perl libnotify-bin httpie
 
-npm install -g dumper js-beautify webpack webpack-dev-server yarn nodemon browser-sync serve
+npm install -g dumper js-beautify yarn nodemon browser-sync serve typescript
 
 apt-get autoremove -y --purge
 
