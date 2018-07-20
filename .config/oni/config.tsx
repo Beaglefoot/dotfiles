@@ -76,21 +76,30 @@ const repaintSurroundingContainer = ({
   container.style.color = foregroundColor;
 };
 
-const intervalID = setInterval(() => {
-  const faBoltIcon = document.getElementsByClassName('fa-bolt')[0];
-  const faMagicIcon = document.getElementsByClassName('fa-magic')[0];
+const repaintState = {
+  attempts: 0,
+  classesToRepaint: ['fa-bolt', 'fa-magic']
+};
 
-  if (faBoltIcon && faMagicIcon) {
+const intervalID = setInterval(() => {
+  repaintState.classesToRepaint = repaintState.classesToRepaint.filter(
+    className => {
+      const icon = document.getElementsByClassName(className)[0];
+
+      if (icon) {
+        repaintSurroundingContainer({
+          icon,
+          backgroundColor: '#839496',
+          foregroundColor: '#EEE8D5'
+        });
+
+        return false;
+      }
+
+      return true;
+    }
+  );
+
+  if (++repaintState.attempts > 200 || !repaintState.classesToRepaint.length)
     clearInterval(intervalID);
-    repaintSurroundingContainer({
-      icon: faBoltIcon,
-      backgroundColor: '#839496',
-      foregroundColor: '#EEE8D5'
-    });
-    repaintSurroundingContainer({
-      icon: faMagicIcon,
-      backgroundColor: '#839496',
-      foregroundColor: '#EEE8D5'
-    });
-  }
 }, 50);
