@@ -1,7 +1,7 @@
 #!/bin/bash
 
 zypper refresh
-zypper install -yl --no-recommends nodejs8 vim gvim neovim git tmux gpick opera
+zypper install -yl --no-recommends nodejs8 vim gvim neovim git tmux siege gpick opera
 
 npm install -g dumper js-beautify yarn nodemon browser-sync serve typescript
 
