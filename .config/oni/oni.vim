@@ -35,6 +35,15 @@ map <C-Tab> :tabnext<CR>
 nmap <C-Tab> :tabnext<CR>
 imap <C-Tab> <Esc>:tabnext<CR>i
 
+" Tab movement on mac os
+map  <M-Right> :tabnext<CR>
+nmap <M-Right> :tabnext<CR>
+imap <M-Right> <Esc>:tabnext<CR>i
+map  <M-Left> :tabprevious<CR>
+nmap <M-Left> :tabprevious<CR>
+imap <M-Left> <Esc>:tabprevious<CR>i
+
+
 " Move to the previous tab with Ctrl+Shift+Tab
 map <C-S-Tab> :tabprevious<CR>
 nmap <C-S-Tab> :tabprevious<CR>
