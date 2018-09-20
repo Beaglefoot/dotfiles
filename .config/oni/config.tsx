@@ -33,7 +33,7 @@ const getCygwinPath = () =>
     )
     .join('\\');
 
-const fontSizes =
+const getFontSizes = () =>
   screen.width <= 1920
     ? {
         editor: '14px',
@@ -43,6 +43,8 @@ const fontSizes =
         editor: '16px',
         statusbar: '14px'
       };
+
+const fontSizes = getFontSizes();
 
 export const configuration = {
   'ui.colorscheme': 'solarized8_light',
@@ -68,7 +70,7 @@ export const configuration = {
   'oni.hideMenu': true,
   'editor.fontSize': fontSizes.editor,
   'editor.fontFamily': 'Source Code Pro',
-  'editor.maximizeScreenOnStart': true,
+  // 'editor.maximizeScreenOnStart': true,
 
   // UI customizations
   'ui.animations.enabled': true,
@@ -114,3 +116,14 @@ const intervalID = setInterval(() => {
   if (++repaintState.attempts > 200 || !repaintState.classesToRepaint.length)
     clearInterval(intervalID);
 }, 50);
+
+// TODO: Needs some thoughtful rework
+window.onresize = (e: UIEvent) => {
+  const fontSizes = getFontSizes();
+  console.log(new Date().toTimeString().split(' ')[0], 'resize');
+
+  Oni.configuration.setValues({
+    'statusbar.fontSize': fontSizes.statusbar,
+    'editor.fontSize': fontSizes.editor
+  });
+};
