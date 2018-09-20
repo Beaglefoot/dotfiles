@@ -33,6 +33,17 @@ const getCygwinPath = () =>
     )
     .join('\\');
 
+const fontSizes =
+  screen.width <= 1920
+    ? {
+        editor: '14px',
+        statusbar: '13px'
+      }
+    : {
+        editor: '16px',
+        statusbar: '14px'
+      };
+
 export const configuration = {
   'ui.colorscheme': 'solarized8_light',
   'colors.background': '#EEE8D5',
@@ -55,7 +66,7 @@ export const configuration = {
     ? `${getCygwinPath()}\\home\\${process.env.USERNAME}\\.config\\oni\\oni.vim`
     : `${process.env.HOME}/.config/oni/oni.vim`,
   'oni.hideMenu': true,
-  'editor.fontSize': '14px',
+  'editor.fontSize': fontSizes.editor,
   'editor.fontFamily': 'Source Code Pro',
   'editor.maximizeScreenOnStart': true,
 
@@ -63,7 +74,7 @@ export const configuration = {
   'ui.animations.enabled': true,
   'ui.fontSmoothing': 'auto',
 
-  'statusbar.fontSize': '13px'
+  'statusbar.fontSize': fontSizes.statusbar
 };
 
 const repaintSurroundingContainer = ({
