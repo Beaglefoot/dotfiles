@@ -21,6 +21,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'othree/html5.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'prettier/vim-prettier'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
