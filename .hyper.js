@@ -4,6 +4,9 @@
 
 module.exports = {
   config: {
+    // Use shortcuts involving alt key with options key on mac
+    modifierKeys: { altIsMeta: true },
+
     // choose either `'stable'` for receiving highly polished,
     // or `'canary'` for less polished but more frequent updates
     updateChannel: 'stable',
