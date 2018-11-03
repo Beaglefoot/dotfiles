@@ -23,7 +23,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
 Plugin 'skammer/vim-css-color'
-Plugin 'pangloss/vim-javascript'
+Plugin 'othree/yajs.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'mxw/vim-jsx'
@@ -36,7 +36,7 @@ Plugin 'wavded/vim-stylus'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'leafgarland/typescript-vim'
+Plugin 'herringtondarkholme/yats.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'prettier/vim-prettier'
 Plugin 'raimondi/delimitmate'
@@ -161,8 +161,7 @@ syntax on
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set different shiftwidth and tabstop on '.js' files
-autocmd BufRead,BufNewFile *.js,*.jsx,*.json,*.html,*.css,*.scss,*.sass,*.pug,*.styl set tabstop=2 shiftwidth=2
-
+autocmd BufRead,BufNewFile *.js,*.jsx,*.ts,*.tsx,*.json,*.html,*.css,*.scss,*.sass,*.pug,*.styl set tabstop=2 shiftwidth=2
 
 " Enable matchit plugin which ships with vim and greatly enhances '%'
 runtime macros/matchit.vim
