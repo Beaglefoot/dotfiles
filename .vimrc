@@ -207,3 +207,7 @@ endif
 " Autorun Prettier on saving file
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.css,*.scss,*.less Prettier
+
+" Expand brackets, braces, parens with <CR>
+let g:delimitMate_expand_cr = 1
+
