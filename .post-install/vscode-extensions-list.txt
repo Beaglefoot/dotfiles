@@ -1,0 +1,5 @@
+Braver.vscode-solarized
+eamodio.gitlens
+eg2.tslint
+esbenp.prettier-vscode
+vscodevim.vim
