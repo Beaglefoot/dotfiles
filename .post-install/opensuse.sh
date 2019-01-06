@@ -3,7 +3,7 @@
 zypper refresh
 zypper install -yl --no-recommends nodejs8 vim gvim neovim git tmux siege gpick opera
 
-npm install -g dumper js-beautify yarn nodemon browser-sync serve typescript
+cat npm-list.txt | xargs npm install -g
 
 pip install --upgrade pip setuptools
 pip install --upgrade httpie

@@ -5,7 +5,7 @@ curl -sL https://deb.nodesource.com/setup_8.x | bash -
 apt-get update
 apt-get install -y nodejs vim vim-gtk git tmux gpick shutter libgoo-canvas-perl libnotify-bin httpie siege
 
-npm install -g dumper js-beautify yarn nodemon browser-sync serve typescript
+cat npm-list.txt | xargs npm install -g
 
 apt-get autoremove -y --purge
 
