@@ -1,0 +1,11 @@
+nodejs10
+vim
+gvim
+neovim
+git
+tmux
+docker
+python3-docker-compose
+siege
+gpick
+opera

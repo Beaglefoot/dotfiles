@@ -1,7 +1,7 @@
 #!/bin/bash
 
 zypper refresh
-zypper install -yl --no-recommends nodejs8 vim gvim neovim git tmux siege gpick opera
+cat opensuse-list.txt | xargs zypper install -yl --no-recommends
 
 cat npm-list.txt | xargs npm install -g
 
