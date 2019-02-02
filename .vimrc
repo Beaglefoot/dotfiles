@@ -40,6 +40,7 @@ Plugin 'herringtondarkholme/yats.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'prettier/vim-prettier'
 Plugin 'raimondi/delimitmate'
+Plugin 'w0rp/ale'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -211,3 +212,14 @@ autocmd BufWritePre *.js,*.jsx,*.css,*.scss,*.less Prettier
 " Expand brackets, braces, parens with <CR>
 let g:delimitMate_expand_cr = 1
 
+
+" ---- ALE Plugin ----
+nnoremap <F12> :ALEGoToDefinitionInTab<CR>
+nnoremap gd :ALEGoToDefinition<CR>
+nnoremap gtd :ALEGoToDefinitionInTab<CR>
+nnoremap gtd :ALEGoToDefinitionInTab<CR>
+nnoremap gsd :ALEGoToDefinitionInSplit<CR>
+nnoremap gvd :ALEGoToDefinitionInVSplit<CR>
+" Color fixes
+highlight ALEError ctermbg=16
+highlight ALEWarning ctermbg=16
