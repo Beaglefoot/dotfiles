@@ -223,3 +223,7 @@ nnoremap gvd :ALEGoToDefinitionInVSplit<CR>
 " Color fixes
 highlight ALEError ctermbg=16
 highlight ALEWarning ctermbg=16
+" Flow typings setup
+let g:ale_linters = {
+\  'javascript': ['flow', 'flow-language-server']
+\}
