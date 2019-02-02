@@ -114,7 +114,6 @@ if has("gui_running")
     set guitablabel=%N)\ %h%t\ %M
 else
     set t_Co=16
-    " colorscheme base16-monokai
 
     try
         echo g:colors_name
