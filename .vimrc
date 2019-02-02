@@ -122,6 +122,7 @@ else
         hi MatchParen term=reverse cterm=bold ctermbg=14 ctermfg=0 guibg=Cyan
         hi Search term=reverse cterm=NONE ctermbg=11 ctermfg=0 guibg=Yellow
         hi StatusLine cterm=reverse
+        hi Visual ctermbg=30
     endtry
 endif
 
