@@ -19,5 +19,6 @@
   "vim.hlsearch": true,
   "vim.ignorecase": false,
   "explorer.confirmDragAndDrop": false,
-  "window.title": "${activeEditorMedium}${separator}${rootName}"
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "editor.cursorBlinking": "solid"
 }
