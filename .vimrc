@@ -220,6 +220,7 @@ nnoremap gtd :ALEGoToDefinitionInTab<CR>
 nnoremap gtd :ALEGoToDefinitionInTab<CR>
 nnoremap gsd :ALEGoToDefinitionInSplit<CR>
 nnoremap gvd :ALEGoToDefinitionInVSplit<CR>
+nnoremap gh :ALEHover<CR>
 " Color fixes
 highlight ALEError ctermbg=16
 highlight ALEWarning ctermbg=16
