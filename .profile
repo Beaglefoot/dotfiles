@@ -9,4 +9,5 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias ls='ls -G'
     alias tree='tree -C'
     alias grep='grep --color'
+    alias ding='terminal-notifier -message "Done"'
 fi
