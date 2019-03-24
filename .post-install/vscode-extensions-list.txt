@@ -1,5 +1,8 @@
 Braver.vscode-solarized
+bungcip.better-toml
 eamodio.gitlens
-eg2.tslint
 esbenp.prettier-vscode
+ms-vscode.vscode-typescript-tslint-plugin
+PeterJausovec.vscode-docker
+rust-lang.rust
 vscodevim.vim
