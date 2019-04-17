@@ -6,7 +6,6 @@ cat opensuse-list.txt | xargs zypper install -yl --no-recommends
 cat npm-list.txt | xargs npm install -g
 
 pip install --upgrade pip setuptools
-pip install --upgrade httpie
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
