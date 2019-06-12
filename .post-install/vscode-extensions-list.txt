@@ -1,7 +1,10 @@
+be5invis.toml
 Braver.vscode-solarized
 bungcip.better-toml
 eamodio.gitlens
 esbenp.prettier-vscode
+jchannon.csharpextensions
+ms-vscode.csharp
 ms-vscode.vscode-typescript-tslint-plugin
 PeterJausovec.vscode-docker
 rust-lang.rust
