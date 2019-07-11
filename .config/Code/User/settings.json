@@ -21,5 +21,6 @@
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "editor.cursorBlinking": "solid",
   "update.channel": "manual",
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "breadcrumbs.enabled": false
 }

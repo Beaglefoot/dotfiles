@@ -2,7 +2,6 @@ dumper
 js-beautify
 yarn
 nodemon
-browser-sync
 serve
 typescript
 cloc

@@ -127,11 +127,6 @@ fi
 
 
 
-# Make gvim accessible with cygwin
-[[ $OS =~ 'Windows' ]] && PATH=$PATH:/cygdrive/c/Program\ Files\ \(x86\)/Vim/vim80/
-
-
-
 # 'touch' alternative with creation of intermediate dirs
 mktouch() {
     if [ $# -lt 1 ]; then
