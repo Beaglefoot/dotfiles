@@ -1,26 +1,37 @@
 {
+  "breadcrumbs.enabled": false,
+  "csharp.referencesCodeLens.enabled": false,
+  "editor.cursorBlinking": "solid",
   "editor.fontFamily": "Source Code Pro",
   "editor.fontSize": 14,
   "editor.fontWeight": "400",
-  "editor.tabSize": 2,
-  "editor.renderIndentGuides": false,
-  "editor.wordWrap": "on",
-  "editor.multiCursorModifier": "ctrlCmd",
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderIndentGuides": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "explorer.confirmDragAndDrop": false,
   "files.eol": "\n",
-  "workbench.editor.enablePreview": false,
-  "gitlens.currentLine.enabled": false,
+  "files.insertFinalNewline": true,
+  "git.enableSmartCommit": true,
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
-  "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
+  "gitlens.currentLine.enabled": false,
   "gitlens.keymap": "alternate",
+  "update.mode": "manual",
   "vim.hlsearch": true,
   "vim.ignorecase": false,
-  "explorer.confirmDragAndDrop": false,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "editor.cursorBlinking": "solid",
-  "update.channel": "manual",
-  "files.insertFinalNewline": true,
-  "breadcrumbs.enabled": false
+  "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
+  "workbench.editor.enablePreview": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.renderIndentGuides": true
+  },
+  "[csharp]": {
+    "editor.tabSize": 4
+  }
 }
