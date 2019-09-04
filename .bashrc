@@ -145,3 +145,7 @@ if [ ! -e ~/.bash_completions/npm-completion.bash ]; then
     npm completion > ~/.bash_completions/npm-completion.bash
 fi
 . ~/.bash_completions/npm-completion.bash
+
+
+# Dotnet
+. ~/.bash_completions/dotnet-completion.bash

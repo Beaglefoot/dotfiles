@@ -18,4 +18,5 @@ fi
 
 if [[ "$OSTYPE" == "cygwin" ]]; then
     alias killall='taskkill.exe /F /IM'
+    alias dotnet='dotnet.exe'
 fi
