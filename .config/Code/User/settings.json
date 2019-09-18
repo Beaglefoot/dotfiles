@@ -11,6 +11,7 @@
   "editor.renderIndentGuides": false,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
+  "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.eol": "\n",
   "files.insertFinalNewline": true,
@@ -20,11 +21,13 @@
   "gitlens.currentLine.enabled": false,
   "gitlens.keymap": "alternate",
   "update.mode": "manual",
+  "vim.foldfix": true,
   "vim.hlsearch": true,
   "vim.ignorecase": false,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
   "workbench.editor.enablePreview": false,
+  "workbench.statusBar.feedback.visible": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
