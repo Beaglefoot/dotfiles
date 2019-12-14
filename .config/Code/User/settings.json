@@ -24,10 +24,10 @@
   "vim.foldfix": true,
   "vim.hlsearch": true,
   "vim.ignorecase": false,
+  "vim.vimrc.enable": false,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
   "workbench.editor.enablePreview": false,
-  "workbench.statusBar.feedback.visible": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -36,5 +36,8 @@
   },
   "[csharp]": {
     "editor.tabSize": 4
+  },
+  "[yaml]": {
+    "editor.renderIndentGuides": true
   }
 }
