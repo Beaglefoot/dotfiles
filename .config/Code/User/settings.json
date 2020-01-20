@@ -1,11 +1,11 @@
 {
-  "breadcrumbs.enabled": false,
-  "csharp.referencesCodeLens.enabled": false,
+  "breadcrumbs.enabled": true,
   "editor.cursorBlinking": "solid",
   "editor.fontFamily": "Source Code Pro",
   "editor.fontSize": 14,
   "editor.fontWeight": "400",
   "editor.formatOnSave": true,
+  "editor.lightbulb.enabled": false,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderIndentGuides": false,
@@ -20,6 +20,8 @@
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.keymap": "alternate",
+  "typescript.preferences.renameShorthandProperties": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "update.mode": "manual",
   "vim.foldfix": true,
   "vim.hlsearch": true,
@@ -29,15 +31,18 @@
   "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
   "workbench.editor.enablePreview": false,
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[html]": {
     "editor.renderIndentGuides": true
   },
-  "[csharp]": {
-    "editor.tabSize": 4
-  },
   "[yaml]": {
     "editor.renderIndentGuides": true
+  },
+  "[csharp]": {
+    "editor.tabSize": 4
   }
 }
