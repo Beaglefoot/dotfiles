@@ -1,0 +1,11 @@
+version: '3'
+services:
+  sql-playground:
+    image: 'postgres'
+    ports:
+        - "5432:5432"
+    volumes:
+        - ./volume:/var/lib/postgresql/data
+    environment:
+        - POSTGRES_PASSWORD=mysecretpassword
+    container_name: sql-playground
