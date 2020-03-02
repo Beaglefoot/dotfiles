@@ -5,7 +5,9 @@ services:
     ports:
         - "5432:5432"
     volumes:
+        - ./postgresql.conf:/etc/postgresql/postgresql.conf
         - ./volume:/var/lib/postgresql/data
     environment:
         - POSTGRES_PASSWORD=mysecretpassword
     container_name: sql-playground
+    command: postgres -c 'config_file=/etc/postgresql/postgresql.conf'
