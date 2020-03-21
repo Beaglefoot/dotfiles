@@ -1,4 +1,3 @@
-dumper
 js-beautify
 yarn
 nodemon

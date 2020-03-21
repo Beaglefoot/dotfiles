@@ -1,6 +1,5 @@
-nodejs10
+nodejs12
 vim
-gvim
 neovim
 git
 tmux

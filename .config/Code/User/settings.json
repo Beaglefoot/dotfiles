@@ -1,5 +1,7 @@
 {
   "breadcrumbs.enabled": true,
+  "csharp.referencesCodeLens.enabled": false,
+  "csharp.testsCodeLens.enabled": false,
   "editor.cursorBlinking": "solid",
   "editor.fontFamily": "Source Code Pro",
   "editor.fontSize": 14,
@@ -25,6 +27,9 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "update.mode": "manual",
   "vim.foldfix": true,
+  "vim.handleKeys": {
+    "<C-k>": false
+  },
   "vim.hlsearch": true,
   "vim.ignorecase": false,
   "vim.vimrc.enable": false,
@@ -36,7 +41,10 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.renderIndentGuides": true
