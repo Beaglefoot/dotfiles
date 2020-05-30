@@ -38,10 +38,10 @@
   "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
   "workbench.editor.enablePreview": false,
   "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -54,5 +54,11 @@
   },
   "[csharp]": {
     "editor.tabSize": 4
+  },
+  "files.exclude": {
+    "node_modules": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

@@ -56,6 +56,7 @@ _k_friendly_name=KDE Daemon
 {245b8a61-1a2e-4739-8d9b-00f2c6183a12}=none,none,Launch Konsole
 {a36d3c47-b40d-4568-bfe4-be8e46ee0383}=Ctrl+Alt+M,none,Telegram
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=,none,Search
+{f62388c5-252b-46ec-89fe-2c7359a34fad}=Ctrl+Print,none,Screenshot Area
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -65,6 +66,13 @@ increase_microphone_volume=Microphone Volume Up,Microphone Volume Up,Increase Mi
 increase_volume=Volume Up,Volume Up,Increase Volume
 mic_mute=Microphone Mute,Microphone Mute,Mute Microphone
 mute=Volume Mute,Volume Mute,Mute
+
+[knotes]
+_k_friendly_name=KNotes
+hide_all_notes=Alt+Shift+H,Alt+Shift+H,Hide All Notes
+new_note=Alt+Shift+N,Alt+Shift+N,New Note
+new_note_clipboard=Alt+Shift+C,Alt+Shift+C,New Note From Clipboard
+show_all_notes=Alt+Shift+S,Alt+Shift+S,Show All Notes
 
 [krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents
@@ -258,7 +266,7 @@ _launch=none,none,Launch Okular
 ActiveWindowScreenShot=none,Meta+Print,Capture Active Window
 CurrentMonitorScreenShot=,none,Capture Current Monitor
 FullScreenScreenShot=Print,Shift+Print,Capture Entire Desktop
-RectangularRegionScreenShot=Ctrl+Print,Meta+Shift+Print,Capture Rectangular Region
+RectangularRegionScreenShot=,Meta+Shift+Print,Capture Rectangular Region
 _k_friendly_name=Spectacle
 _launch=none,Print,Launch Spectacle
 

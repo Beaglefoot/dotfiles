@@ -4,6 +4,9 @@ DefaultProfile=MyProfile.profile
 [Favorite Profiles]
 Favorites=
 
+[KFileDialog Settings]
+listViewIconSize=0
+
 [KonsoleWindow]
 ShowMenuBarByDefault=false
 
@@ -16,3 +19,6 @@ ToolBarsMovable=Disabled
 Width 1920=952
 Width 720=720
 Window-Maximized 1080x1920=true
+Window-Maximized 480x720=true
+Window-Maximized 864x1536=true
+Window-Maximized 960x1707=true
