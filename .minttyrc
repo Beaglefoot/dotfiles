@@ -1,7 +1,7 @@
 BoldAsFont=no
 Columns=142
 Rows=50
-FontHeight=10
+FontHeight=11
 CursorType=block
 Font=Lucida Console
 ForegroundColour=210,210,210

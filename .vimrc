@@ -39,7 +39,8 @@ try
     echo g:colors_name
 catch
     hi clear MatchParen
-    hi MatchParen term=reverse cterm=bold ctermbg=14 ctermfg=0 guibg=Cyan
+    " hi MatchParen term=reverse cterm=bold ctermbg=14 ctermfg=0 guibg=Cyan
+    hi MatchParen ctermfg=7 ctermbg=8
     hi Search term=reverse cterm=NONE ctermbg=11 ctermfg=0 guibg=Yellow
     hi StatusLine cterm=reverse
     hi Visual ctermbg=30
@@ -55,6 +56,7 @@ let g:syntastic_loc_list_height = 6
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
+set nu
 set autoread                            " Reload files changed outside of vim
 set nobackup                            " Remove the .ext~ files, but not the swapfiles
 set backupcopy=yes                      " Make vim compatible with webpack watching mechanism
