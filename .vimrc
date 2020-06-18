@@ -22,6 +22,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'raimondi/delimitmate'
+Plugin 'clavelito/indent-awk.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
