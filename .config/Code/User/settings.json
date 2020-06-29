@@ -60,5 +60,12 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "search.exclude": {
+    "package-lock.json": true,
+    "yarn.lock": true
+  },
+  "python.showStartPage": false,
+  "window.zoomLevel": 0
 }

@@ -32,15 +32,14 @@ filetype plugin indent on    " required
 
 
 
+" Colors setup
 set background=light
-
 set t_Co=16
 
 try
     echo g:colors_name
 catch
     hi clear MatchParen
-    " hi MatchParen term=reverse cterm=bold ctermbg=14 ctermfg=0 guibg=Cyan
     hi MatchParen ctermfg=7 ctermbg=8
     hi Search term=reverse cterm=NONE ctermbg=11 ctermfg=0 guibg=Yellow
     hi StatusLine cterm=reverse
@@ -48,14 +47,6 @@ catch
 endtry
 
 
-
-" Syntastic settings
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_jump = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_loc_list_height = 6
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
 
 set nu
 set autoread                            " Reload files changed outside of vim
@@ -94,3 +85,5 @@ set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip
 " Expand brackets, braces, parens with <CR>
 let g:delimitMate_expand_cr = 1
 
+" Set up comments for awk filetype
+autocmd BufRead,BufNewFile *.awk call tcomment#type#Define("awk", "# %s")

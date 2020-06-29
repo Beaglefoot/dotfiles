@@ -9,4 +9,5 @@ siege
 gpick
 opera
 python3-httpie
+python3-autopep8
 libnotify-tools
