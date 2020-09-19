@@ -1,0 +1,4 @@
+git-gui
+marble-kde
+konversation
+kompare
