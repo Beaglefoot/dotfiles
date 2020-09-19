@@ -5,6 +5,10 @@
 
 zypper ar -f http://packman.inode.at/suse/openSUSE_Tumbleweed/ packman
 zypper ar -f http://opensuse-guide.org/repo/openSUSE_Tumbleweed/ libdvdcss
+zypper ar -f https://rpm.opera.com/rpm opera
+zypper ar -f https://packages.microsoft.com/yumrepos/vscode vscode
+zypper ar -f https://packages.microsoft.com/opensuse/15/prod/ packages-microsoft-com-prod
+
 zypper refresh
 
-zypper install libdvdcss2 ffmpeg lame gstreamer-plugins-libav gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer-plugins-ugly-orig-addon vlc vlc-codecs flash-player flash-player-ppapi libxine2 libxine2-codecs chromium-ffmpeg-extra
+cat opensuse-interactive.txt| xargs zypper install

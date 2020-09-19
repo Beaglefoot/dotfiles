@@ -1,0 +1,16 @@
+libdvdcss2
+ffmpeg
+lame
+gstreamer-plugins-libav
+gstreamer-plugins-bad
+gstreamer-plugins-ugly
+gstreamer-plugins-ugly-orig-addon
+vlc
+vlc-codecs
+flash-player
+flash-player-ppapi
+libxine2
+libxine2-codecs
+opera
+chromium-ffmpeg-extra
+code

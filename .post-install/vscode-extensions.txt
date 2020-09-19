@@ -1,0 +1,14 @@
+Braver.vscode-solarized
+dbaeumer.vscode-eslint
+eamodio.gitlens
+esbenp.prettier-vscode
+hangxingliu.vscode-awk-hint
+jchannon.csharpextensions
+jdinhlife.gruvbox
+luggage66.AWK
+ms-azuretools.vscode-docker
+ms-dotnettools.csharp
+ms-python.python
+ms-vscode.cpptools
+vscodevim.vim
+yzhang.markdown-all-in-one

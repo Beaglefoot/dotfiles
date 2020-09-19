@@ -2,7 +2,7 @@
 
 while read ext; do
     code --install-extension $ext
-done < vscode-extensions-list.txt
+done < vscode-extensions.txt
 
 
 if [[ "$OSTYPE" == "darwin"* ]]; then

@@ -5,7 +5,7 @@ curl -sL https://deb.nodesource.com/setup_8.x | bash -
 apt-get update
 apt-get install -y nodejs vim vim-gtk git tmux gpick shutter libgoo-canvas-perl libnotify-bin httpie siege
 
-cat npm-list.txt | xargs npm install -g
+cat npm.txt | xargs npm install -g
 
 apt-get autoremove -y --purge
 

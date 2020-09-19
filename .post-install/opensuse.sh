@@ -1,9 +1,11 @@
 #!/bin/bash
 
 zypper refresh
-cat opensuse-list.txt | xargs zypper install -yl --no-recommends
+cat opensuse.txt | xargs zypper install -yl --no-recommends
 
-cat npm-list.txt | xargs npm install -g
+npm set prefix "$HOME/.npm"
+npm set save-exact true
+cat npm.txt | xargs npm install -g
 
 pip install --upgrade pip setuptools
 

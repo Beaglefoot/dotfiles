@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat brew-list.txt| xargs brew install
+cat brew.txt| xargs brew install
 
 brew tap homebrew/cask-fonts
-cat brew-cask-list.txt| xargs brew cask install
+cat brew-cask.txt| xargs brew cask install
