@@ -11,3 +11,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias grep='grep --color'
     alias ding='terminal-notifier -message "Done"'
 fi
+
+
+# Update PATH
+if [[ -e "$HOME/.npm/bin" ]]; then
+    PATH="$HOME/.npm/bin:$PATH"
+fi
