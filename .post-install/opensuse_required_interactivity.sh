@@ -5,7 +5,9 @@
 
 zypper ar -f http://packman.inode.at/suse/openSUSE_Tumbleweed/ packman
 zypper ar -f http://opensuse-guide.org/repo/openSUSE_Tumbleweed/ libdvdcss
+rpm --import https://rpm.opera.com/rpmrepo.key
 zypper ar -f https://rpm.opera.com/rpm opera
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
 zypper ar -f https://packages.microsoft.com/yumrepos/vscode vscode
 zypper ar -f https://packages.microsoft.com/opensuse/15/prod/ packages-microsoft-com-prod
 
