@@ -4,7 +4,7 @@ ColorScheme=alternatedMonokai
 Font=Hack,11,-1,5,50,0,0,0,0,0
 
 [General]
-Environment=TERM=xterm-256color
+Environment=TERM=xterm-256color,LANG=en_US.utf8
 Name=MyProfile
 Parent=FALLBACK/
 TerminalCenter=false
