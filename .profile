@@ -14,6 +14,14 @@ fi
 
 
 # Update PATH
-if [[ -e "$HOME/.npm/bin" ]]; then
-    PATH="$HOME/.npm/bin:$PATH"
+npm_binaries="$HOME/.npm/bin"
+
+if [[ -e "$npm_binaries" && ! $PATH =~ "$npm_binaries" ]]; then
+    PATH="$npm_binaries:$PATH"
+fi
+
+pip_binaries="$HOME/.local/bin"
+
+if [[ -e "$pip_binaries" && ! $PATH =~ "$pip_binaries" ]]; then
+    PATH="$pip_binaries:$PATH"
 fi
