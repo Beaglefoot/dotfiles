@@ -25,7 +25,7 @@
   "gitlens.keymap": "alternate",
   "gitlens.mode.active": "zen",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "python.languageServer": "Microsoft",
+  "python.languageServer": "Pylance",
   "python.showStartPage": false,
   "typescript.preferences.useAliasesForRenames": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -65,6 +65,7 @@
     "editor.tabSize": 4
   },
   "files.exclude": {
+    ".venv": true,
     "**/__pycache__": true,
     "**/*.pyc": true,
     "node_modules": true
@@ -76,4 +77,11 @@
     "package-lock.json": true,
     "yarn.lock": true
   },
+  "python.linting.ignorePatterns": [
+    ".vscode/*.py",
+    "**/site-packages/**/*.py",
+    ".venv/**/*.py"
+  ],
+  "python.analysis.typeCheckingMode": "basic",
+  "autoDocstring.docstringFormat": "numpy",
 }
