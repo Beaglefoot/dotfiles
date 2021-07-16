@@ -1,6 +1,7 @@
 {
   "[awk]": {
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.semanticHighlighting.enabled": true
   },
   "[csharp]": {
     "editor.tabSize": 4
@@ -16,7 +17,7 @@
   },
   "[python]": {
     "editor.renderIndentGuides": true,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -46,10 +47,10 @@
   "extensions.ignoreRecommendations": true,
   "files.eol": "\n",
   "files.exclude": {
-    "**/*.pyc": true,
-    "**/__pycache__": true,
     ".venv": true,
-    "node_modules": true
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/node_modules": true
   },
   "files.insertFinalNewline": true,
   "git.enableSmartCommit": true,
@@ -67,7 +68,6 @@
     "**/site-packages/**/*.py",
     ".venv/**/*.py"
   ],
-  "python.showStartPage": false,
   "search.exclude": {
     "package-lock.json": true,
     "yarn.lock": true
@@ -85,9 +85,14 @@
   "window.menuBarVisibility": "toggle",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
   "workbench.editor.enablePreview": false,
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  }
+    "*.ipynb": "jupyter-notebook"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "debug.javascript.suggestPrettyPrinting": false,
+  "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
 }
