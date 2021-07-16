@@ -1,4 +1,32 @@
 {
+  "[awk]": {
+    "editor.tabSize": 4
+  },
+  "[csharp]": {
+    "editor.tabSize": 4
+  },
+  "[html]": {
+    "editor.renderIndentGuides": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.renderIndentGuides": true,
+    "editor.tabSize": 4
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.renderIndentGuides": true
+  },
   "breadcrumbs.enabled": true,
   "csharp.referencesCodeLens.enabled": false,
   "csharp.testsCodeLens.enabled": false,
@@ -7,16 +35,22 @@
   "editor.fontWeight": "400",
   "editor.formatOnSave": true,
   "editor.lightbulb.enabled": false,
+  "editor.linkedEditing": false,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.renameOnType": false,
   "editor.renderIndentGuides": false,
   "editor.tabSize": 2,
-  "editor.wordWrap": "on",
+  "editor.wordWrap": "off",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "files.eol": "\n",
+  "files.exclude": {
+    "**/*.pyc": true,
+    "**/__pycache__": true,
+    ".venv": true,
+    "node_modules": true
+  },
   "files.insertFinalNewline": true,
   "git.enableSmartCommit": true,
   "gitlens.codeLens.authors.enabled": false,
@@ -25,12 +59,26 @@
   "gitlens.keymap": "alternate",
   "gitlens.mode.active": "zen",
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.typeCheckingMode": "basic",
   "python.languageServer": "Pylance",
+  "python.linting.ignorePatterns": [
+    ".vscode/*.py",
+    "**/site-packages/**/*.py",
+    ".venv/**/*.py"
+  ],
   "python.showStartPage": false,
+  "search.exclude": {
+    "package-lock.json": true,
+    "yarn.lock": true
+  },
   "typescript.preferences.useAliasesForRenames": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "update.mode": "manual",
   "vim.foldfix": true,
+  "vim.handleKeys": {
+    "<C-k>": false
+  },
   "vim.hlsearch": true,
   "vim.ignorecase": false,
   "vim.vimrc.enable": false,
@@ -39,49 +87,7 @@
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
   "workbench.editor.enablePreview": false,
-  "vim.handleKeys": {
-    "<C-k>": false
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[html]": {
-    "editor.renderIndentGuides": true
-  },
-  "[yaml]": {
-    "editor.renderIndentGuides": true
-  },
-  "[python]": {
-    "editor.renderIndentGuides": true,
-    "editor.tabSize": 4
-  },
-  "[csharp]": {
-    "editor.tabSize": 4
-  },
-  "files.exclude": {
-    ".venv": true,
-    "**/__pycache__": true,
-    "**/*.pyc": true,
-    "node_modules": true
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "search.exclude": {
-    "package-lock.json": true,
-    "yarn.lock": true
-  },
-  "python.linting.ignorePatterns": [
-    ".vscode/*.py",
-    "**/site-packages/**/*.py",
-    ".venv/**/*.py"
-  ],
-  "python.analysis.typeCheckingMode": "basic",
-  "autoDocstring.docstringFormat": "numpy",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  }
 }
