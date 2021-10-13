@@ -135,3 +135,13 @@ fi
 
 # Dotnet
 . ~/.bash_completions/dotnet-completion.bash
+
+
+# Pipenv
+if [ $(which pipenv 2>/dev/null) ]; then
+    if [ ! -e ~/.bash_completions/pipenv-completion.bash ]; then
+        pipenv --completion > ~/.bash_completions/pipenv-completion.bash
+    fi
+
+    . ~/.bash_completions/pipenv-completion.bash
+fi
