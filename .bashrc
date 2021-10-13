@@ -145,3 +145,13 @@ if [ $(which pipenv 2>/dev/null) ]; then
 
     . ~/.bash_completions/pipenv-completion.bash
 fi
+
+
+# Poetry
+if [ $(which poetry 2>/dev/null) ]; then
+    if [ ! -e ~/.bash_completions/poetry-completion.bash ]; then
+        poetry completions -n --alias poetry bash > ~/.bash_completions/poetry-completion.bash
+    fi
+
+    . ~/.bash_completions/poetry-completion.bash
+fi
