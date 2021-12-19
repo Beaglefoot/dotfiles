@@ -23,6 +23,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'raimondi/delimitmate'
 Plugin 'clavelito/indent-awk.vim'
+Plugin 'prabirshrestha/vim-lsp'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,6 +45,7 @@ catch
     hi Search term=reverse cterm=NONE ctermbg=11 ctermfg=0 guibg=Yellow
     hi StatusLine cterm=reverse
     hi Visual ctermbg=30
+    hi lspReference ctermbg=59
 endtry
 
 
@@ -87,3 +89,11 @@ let g:delimitMate_expand_cr = 1
 
 " Set up comments for awk filetype
 autocmd BufRead,BufNewFile *.awk call tcomment#type#Define("awk", "# %s")
+
+if executable('awk-language-server')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'awk-language-server',
+        \ 'cmd': {server_info->['awk-language-server']},
+        \ 'allowlist': ['awk'],
+        \ })
+endif
