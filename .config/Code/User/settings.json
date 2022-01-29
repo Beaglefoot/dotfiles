@@ -1,7 +1,8 @@
 {
   "[awk]": {
     "editor.tabSize": 4,
-    "editor.semanticHighlighting.enabled": true
+    "editor.semanticHighlighting.enabled": true,
+    "editor.formatOnSave": false
   },
   "[csharp]": {
     "editor.tabSize": 4
@@ -17,7 +18,7 @@
   },
   "[python]": {
     "editor.renderIndentGuides": true,
-    "editor.tabSize": 4,
+    "editor.tabSize": 4
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -50,7 +51,11 @@
     ".venv": true,
     "**/__pycache__": true,
     "**/*.pyc": true,
-    "**/node_modules": true
+    "**/node_modules": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
   },
   "files.insertFinalNewline": true,
   "git.enableSmartCommit": true,
@@ -95,4 +100,7 @@
   },
   "debug.javascript.suggestPrettyPrinting": false,
   "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
+  "redhat.telemetry.enabled": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }

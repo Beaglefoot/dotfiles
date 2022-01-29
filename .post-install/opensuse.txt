@@ -1,5 +1,6 @@
-nodejs14
-npm14
+nodejs16
+nodejs16-devel
+npm16
 vim
 git
 tmux
@@ -10,3 +11,4 @@ gpick
 python3-httpie
 python3-autopep8
 libnotify-tools
+zeal

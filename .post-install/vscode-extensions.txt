@@ -1,6 +1,7 @@
 beaglefoot.awk-ide-vscode
 Braver.vscode-solarized
 dbaeumer.vscode-eslint
+deerawan.vscode-dash
 eamodio.gitlens
 esbenp.prettier-vscode
 jchannon.csharpextensions
@@ -12,7 +13,14 @@ ms-python.python
 ms-python.vscode-pylance
 ms-vscode.cpptools
 Orta.vscode-jest
+redhat.java
 redhat.vscode-yaml
 tgriesser.avro-schemas
+VisualStudioExptTeam.vscodeintellicode
+vscjava.vscode-java-debug
+vscjava.vscode-java-dependency
+vscjava.vscode-java-pack
+vscjava.vscode-java-test
+vscjava.vscode-maven
 vscodevim.vim
 yzhang.markdown-all-in-one
