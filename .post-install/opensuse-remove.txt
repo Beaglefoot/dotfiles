@@ -2,3 +2,5 @@ git-gui
 marble-kde
 konversation
 kompare
+patterns-kde-kde_games
+tigervnc
