@@ -115,7 +115,6 @@ if [ ! -e ~/.bash_completions/git-completion.bash ]; then
     wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash\
         -O ~/.bash_completions/git-completion.bash
 fi
-. ~/.bash_completions/git-completion.bash
 
 
 # Yarn
@@ -123,18 +122,12 @@ if [ ! -e ~/.bash_completions/yarn-completion.bash ]; then
     wget https://raw.githubusercontent.com/dsifford/yarn-completion/master/yarn-completion.bash\
         -O ~/.bash_completions/yarn-completion.bash
 fi
-. ~/.bash_completions/yarn-completion.bash
 
 
 # NPM
 if [ ! -e ~/.bash_completions/npm-completion.bash ]; then
     npm completion > ~/.bash_completions/npm-completion.bash
 fi
-. ~/.bash_completions/npm-completion.bash
-
-
-# Dotnet
-. ~/.bash_completions/dotnet-completion.bash
 
 
 # Pipenv
@@ -142,8 +135,6 @@ if [ $(which pipenv 2>/dev/null) ]; then
     if [ ! -e ~/.bash_completions/pipenv-completion.bash ]; then
         pipenv --completion > ~/.bash_completions/pipenv-completion.bash
     fi
-
-    . ~/.bash_completions/pipenv-completion.bash
 fi
 
 
@@ -152,6 +143,16 @@ if [ $(which poetry 2>/dev/null) ]; then
     if [ ! -e ~/.bash_completions/poetry-completion.bash ]; then
         poetry completions -n --alias poetry bash > ~/.bash_completions/poetry-completion.bash
     fi
-
-    . ~/.bash_completions/poetry-completion.bash
 fi
+
+
+# docker-compose
+if [ ! -e ~/.bash_completions/docker-compose-completion.bash ]; then
+    wget https://raw.githubusercontent.com/docker/compose/master/contrib/completion/bash/docker-compose\
+        -O ~/.bash_completions/docker-compose-completion.bash
+fi
+
+
+for fn in ~/.bash_completions/*-completion.bash; do
+    source "$fn"
+done
