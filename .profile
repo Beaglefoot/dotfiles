@@ -25,3 +25,9 @@ pip_binaries="$HOME/.local/bin"
 if [[ -e "$pip_binaries" && ! $PATH =~ "$pip_binaries" ]]; then
     PATH="$pip_binaries:$PATH"
 fi
+
+my_scripts="$HOME/.scripts"
+
+if [[ -e "$my_scripts" && ! $PATH =~ "$my_scripts" ]]; then
+    PATH="$my_scripts:$PATH"
+fi
