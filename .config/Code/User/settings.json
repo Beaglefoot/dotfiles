@@ -2,13 +2,10 @@
   "[awk]": {
     "editor.tabSize": 4,
     "editor.semanticHighlighting.enabled": true,
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true
   },
   "[csharp]": {
     "editor.tabSize": 4
-  },
-  "[html]": {
-    "editor.renderIndentGuides": true
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -17,7 +14,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
-    "editor.renderIndentGuides": true,
     "editor.tabSize": 4
   },
   "[typescript]": {
@@ -26,36 +22,35 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[yaml]": {
-    "editor.renderIndentGuides": true
-  },
   "breadcrumbs.enabled": true,
   "csharp.referencesCodeLens.enabled": false,
   "csharp.testsCodeLens.enabled": false,
+  "editor.bracketPairColorization.enabled": false,
   "editor.cursorBlinking": "solid",
   "editor.fontFamily": "Source Code Pro",
   "editor.fontWeight": "400",
   "editor.formatOnSave": true,
+  "editor.guides.indentation": false,
   "editor.lightbulb.enabled": false,
   "editor.linkedEditing": false,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.renderIndentGuides": false,
-  "editor.tabSize": 2,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 4,
   "editor.wordWrap": "off",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "files.eol": "\n",
   "files.exclude": {
-    ".venv": true,
     "**/__pycache__": true,
-    "**/*.pyc": true,
-    "**/node_modules": true,
     "**/.classpath": true,
+    "**/.factorypath": true,
     "**/.project": true,
     "**/.settings": true,
-    "**/.factorypath": true
+    "**/.venv": true,
+    "**/*.pyc": true,
+    "**/node_modules": true
   },
   "files.insertFinalNewline": true,
   "git.enableSmartCommit": true,
@@ -66,7 +61,9 @@
   "gitlens.mode.active": "zen",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.indexing": true,
   "python.analysis.typeCheckingMode": "basic",
+  "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
   "python.linting.ignorePatterns": [
     ".vscode/*.py",
@@ -101,6 +98,12 @@
   "debug.javascript.suggestPrettyPrinting": false,
   "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
   "redhat.telemetry.enabled": false,
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "Lua.telemetry.enable": false,
+  "files.watcherExclude": {
+    "**/.venv/*/**": true,
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
 }

@@ -4,7 +4,6 @@ dbaeumer.vscode-eslint
 deerawan.vscode-dash
 eamodio.gitlens
 esbenp.prettier-vscode
-jchannon.csharpextensions
 jdinhlife.gruvbox
 mads-hartmann.bash-ide-vscode
 ms-azuretools.vscode-docker
@@ -15,6 +14,9 @@ ms-vscode.cpptools
 Orta.vscode-jest
 redhat.java
 redhat.vscode-yaml
+scala-lang.scala
+scalameta.metals
+sumneko.lua
 tgriesser.avro-schemas
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
