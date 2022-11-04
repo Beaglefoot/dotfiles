@@ -1,6 +1,6 @@
-nodejs16
-nodejs16-devel
-npm16
+nodejs18
+nodejs18-devel
+npm18
 vim
 git
 tmux
