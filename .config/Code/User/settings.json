@@ -14,7 +14,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[python]": {
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -54,12 +55,14 @@
   },
   "files.insertFinalNewline": true,
   "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "never",
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.keymap": "alternate",
   "gitlens.mode.active": "zen",
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "python.analysis.autoImportCompletions": true,
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.indexing": true,
   "python.analysis.typeCheckingMode": "basic",
@@ -86,11 +89,11 @@
   "vim.vimrc.enable": false,
   "window.menuBarVisibility": "toggle",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "window.zoomLevel": 0,
   "workbench.editor.enablePreview": false,
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
+  "workbench.startupEditor": "none",
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -106,4 +109,5 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
+  "jupyter.askForKernelRestart": false,
 }
