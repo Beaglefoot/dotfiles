@@ -141,7 +141,7 @@ fi
 # Poetry
 if [ $(which poetry 2>/dev/null) ]; then
     if [ ! -e ~/.bash_completions/poetry-completion.bash ]; then
-        poetry completions -n --alias poetry bash > ~/.bash_completions/poetry-completion.bash
+        poetry completions bash > ~/.bash_completions/poetry-completion.bash
     fi
 fi
 
