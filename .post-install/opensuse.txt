@@ -27,3 +27,5 @@ libxine2-codecs
 opera
 chromium-ffmpeg-extra
 code
+man-pages
+man-pages-posix
