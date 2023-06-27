@@ -1,6 +1,6 @@
-nodejs18
-nodejs18-devel
-npm18
+nodejs-common
+nodejs-devel-default
+npm-default
 vim
 git
 tmux
