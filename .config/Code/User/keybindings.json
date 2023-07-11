@@ -87,5 +87,9 @@
     "key": "ctrl+h",
     "command": "-extension.vim_ctrl+h",
     "when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+k ctrl+c",
+    "command": "workbench.files.action.collapseExplorerFolders"
   }
 ]
