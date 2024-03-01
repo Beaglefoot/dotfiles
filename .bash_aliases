@@ -11,7 +11,7 @@ fi
 
 if [[ "$OSTYPE" == "linux" ]]; then
     alias ding='notify-send "done"'
-    alias clip='xclip -i -selection clipboard'
+    alias clip='printf %s "$(cat -)" | xclip -i -selection clipboard'
 fi
 
 
