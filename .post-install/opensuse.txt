@@ -21,7 +21,6 @@ gstreamer-plugins-ugly
 gstreamer-plugins-ugly-orig-addon
 vlc
 vlc-codecs
-flash-player
 libxine2
 libxine2-codecs
 opera
@@ -29,3 +28,4 @@ chromium-ffmpeg-extra
 code
 man-pages
 man-pages-posix
+google-noto-coloremoji-fonts

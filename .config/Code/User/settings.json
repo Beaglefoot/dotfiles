@@ -15,7 +15,7 @@
   },
   "[python]": {
     "editor.tabSize": 4,
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -32,7 +32,7 @@
   "editor.fontWeight": "400",
   "editor.formatOnSave": true,
   "editor.guides.indentation": false,
-  "editor.lightbulb.enabled": false,
+  "editor.lightbulb.enabled": "off",
   "editor.linkedEditing": false,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
@@ -112,4 +112,6 @@
   "gitlens.advanced.fileHistoryFollowsRenames": true,
   "python.analysis.autoFormatStrings": true,
   "python.linting.maxNumberOfProblems": 30,
+  "gitlens.ai.experimental.provider": "openai",
+  "gitlens.ai.experimental.openai.model": "gpt-4-turbo-preview"
 }
