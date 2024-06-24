@@ -20,3 +20,9 @@ if [[ "$OSTYPE" == "cygwin" ]]; then
     alias killall='taskkill.exe /F /IM'
     alias dotnet='dotnet.exe'
 fi
+
+
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias clip='pbcopy'
+fi

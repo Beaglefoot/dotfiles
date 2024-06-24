@@ -1,10 +1,20 @@
 # macOS specific changes
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    source ~/.bashrc
+    export PATH="/opt/homebrew/bin/:$PATH"
 
-    if [ -f $(brew --prefix)/etc/bash_completion.d ]; then
-       . $(brew --prefix)/etc/bash_completion.d
+    prefix=$(brew --prefix)
+
+    alias have='which'
+
+    if [ -f "$prefix"/etc/bash_completion ]; then
+       source "$prefix"/etc/bash_completion
     fi
+
+    if [ -d "$prefix"/etc/bash_completion.d ]; then
+       source "$prefix"/etc/bash_completion.d/*
+    fi
+
+    source ~/.bashrc
 
     alias ls='ls -G'
     alias tree='tree -C'
