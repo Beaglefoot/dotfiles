@@ -15,7 +15,8 @@
   },
   "[python]": {
     "editor.tabSize": 4,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -113,5 +114,9 @@
   "python.analysis.autoFormatStrings": true,
   "python.linting.maxNumberOfProblems": 30,
   "gitlens.ai.experimental.provider": "openai",
-  "gitlens.ai.experimental.openai.model": "gpt-4-turbo-preview"
+  "gitlens.ai.experimental.openai.model": "gpt-4-turbo-preview",
+  "python.analysis.extraPaths": ["src/"],
+  "terminal.integrated.showExitAlert": false,
+  "notebook.defaultFormatter": "ms-python.black-formatter",
+  "notebook.formatOnSave.enabled": true
 }
