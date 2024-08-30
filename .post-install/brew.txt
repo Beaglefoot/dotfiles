@@ -1,5 +1,6 @@
 bash
 bash-completion
+coreutils
 docker
 docker-compose
 docker-machine
