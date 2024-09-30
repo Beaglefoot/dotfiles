@@ -21,6 +21,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias grep='grep --color'
     alias date='gdate'
     alias ding='terminal-notifier -message "Done"'
+
+    export HOMEBREW_NO_AUTO_UPDATE=1
 fi
 
 
