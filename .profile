@@ -20,7 +20,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias tree='tree -C'
     alias grep='grep --color'
     alias date='gdate'
-    alias ding='terminal-notifier -message "Done"'
+    alias awk='gawk'
+    alias sed='gsed'
 
     export HOMEBREW_NO_AUTO_UPDATE=1
 fi
