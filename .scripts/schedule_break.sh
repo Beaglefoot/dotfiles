@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 function usage() {
     printf "\n"
@@ -21,7 +21,7 @@ function time2seconds() {
     if [[ "$time_string" =~ ^[0-9]+$ ]]; then
         echo $time_string
     else
-        echo $time_string | awk '
+        echo $time_string | gawk '
             { match($0, /([0-9]+h)?\s?([0-9]+m)?\s?([0-9]+s)?/, tp) }
             END { print tp[1] * 3600 + tp[2] * 60 + tp[3] }
         '
@@ -41,6 +41,18 @@ function clear_line() {
     echo -ne "\033[K"
 }
 
+function notify() {
+    local text="$1"
+    local script_name=$(basename "$0")
+    local notification_timeout_ms=600000
+
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        osascript -e "display notification \"$text\" with title \"$script_name\""
+    else
+        notify-send -t ${notification_timeout_ms} "$text"
+    fi
+}
+
 
 while getopts ':h' OPTION; do
     case $OPTION in
@@ -57,7 +69,6 @@ WAIT_TIME="$*"
 
 validate_wait_time "$WAIT_TIME"
 
-NOTIFICATION_TIMEOUT_MS=600000
 WAIT_SECONDS=$(time2seconds "$WAIT_TIME")
 BREAKS_COUNT=1
 
@@ -69,7 +80,7 @@ while true; do
     echo -ne "\r($BREAKS_COUNT) Next break in: $(humanize_duration $WAIT_SECONDS)"
 
     if [[ $WAIT_SECONDS == 0 ]]; then
-        notify-send -t ${NOTIFICATION_TIMEOUT_MS} "Break may be?"
+        notify "Break may be?"
         echo
         (( BREAKS_COUNT++ ))
         WAIT_SECONDS=$(time2seconds $WAIT_TIME)
