@@ -1,0 +1,7 @@
+com.valvesoftware.Steam
+com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+md.obsidian.Obsidian
+net.ankiweb.Anki
+org.telegram.desktop
+org.zealdocs.Zeal
+us.zoom.Zoom

@@ -9,7 +9,6 @@ siege
 gpick
 httpie
 libnotify-tools
-zeal
 ncdu
 jq
 libdvdcss2
