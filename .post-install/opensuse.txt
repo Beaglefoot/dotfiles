@@ -5,6 +5,7 @@ vim
 git
 tmux
 docker
+docker-compose
 siege
 gpick
 httpie
@@ -23,8 +24,11 @@ vlc-codecs
 libxine2
 libxine2-codecs
 opera
-chromium-ffmpeg-extra
 code
 man-pages
 man-pages-posix
 google-noto-coloremoji-fonts
+s3cmd
+kdeconnect
+distrobox
+distrobox-bash-completion
