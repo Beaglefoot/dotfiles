@@ -24,7 +24,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "breadcrumbs.enabled": true,
   "csharp.referencesCodeLens.enabled": false,
   "csharp.testsCodeLens.enabled": false,
   "editor.bracketPairColorization.enabled": false,
@@ -39,7 +38,6 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.suggestSelection": "first",
   "editor.tabSize": 4,
-  "editor.wordWrap": "off",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
@@ -61,7 +59,6 @@
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.currentLine.enabled": false,
   "gitlens.keymap": "alternate",
-  "gitlens.mode.active": "zen",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.diagnosticMode": "workspace",
@@ -88,6 +85,14 @@
   "vim.hlsearch": true,
   "vim.ignorecase": false,
   "vim.vimrc.enable": false,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["g", "t"],
+      "commands": [
+        "editor.action.goToTypeDefinition",
+      ],
+    }
+  ],
   "window.menuBarVisibility": "toggle",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.editor.enablePreview": false,
@@ -118,5 +123,6 @@
   "python.analysis.extraPaths": ["src/"],
   "terminal.integrated.showExitAlert": false,
   "notebook.defaultFormatter": "ms-python.black-formatter",
-  "notebook.formatOnSave.enabled": true
+  "notebook.formatOnSave.enabled": true,
+  "editor.lineNumbers": "on"
 }
