@@ -23,7 +23,6 @@ vlc
 vlc-codecs
 libxine2
 libxine2-codecs
-opera
 code
 man-pages
 man-pages-posix

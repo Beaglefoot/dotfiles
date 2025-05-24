@@ -1,3 +1,4 @@
+com.opera.Opera
 com.valvesoftware.Steam
 com.valvesoftware.Steam.CompatibilityTool.Proton-GE
 md.obsidian.Obsidian
