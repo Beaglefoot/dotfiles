@@ -1,17 +1,22 @@
 # macOS specific changes
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    export PATH="/opt/homebrew/bin/:$PATH"
+    HOMEBREW_PREFIX=$(brew --prefix)
 
-    prefix=$(brew --prefix)
+    export PATH="$HOMEBREW_PREFIX/bin/:$PATH"
 
     alias have='which'
 
-    if [ -f "$prefix"/etc/bash_completion ]; then
-       source "$prefix"/etc/bash_completion
+    if [ -f "$HOMEBREW_PREFIX"/etc/bash_completion ]; then
+		source "$HOMEBREW_PREFIX"/etc/bash_completion
     fi
 
-    if [ -d "$prefix"/etc/bash_completion.d ]; then
-       source "$prefix"/etc/bash_completion.d/*
+    if [ -d "$HOMEBREW_PREFIX"/etc/bash_completion.d ]; then
+		source "$HOMEBREW_PREFIX"/etc/bash_completion.d/*
+
+		for COMPLETION in "$HOMEBREW_PREFIX"/etc/bash_completion.d/*
+		do
+			[[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+		done
     fi
 
     source ~/.bashrc
