@@ -10,6 +10,10 @@ zypper refresh
 
 cat opensuse.txt | xargs zypper install -yl --no-recommends --allow-vendor-change
 
+# Development tools
+
+sudo zypper install --no-recommends -y -t pattern devel_basis devel_C_C++
+
 # NPM
 
 npm set prefix "$HOME/.npm"
