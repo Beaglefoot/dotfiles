@@ -16,7 +16,7 @@
   "[python]": {
     "editor.tabSize": 4,
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -24,8 +24,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "csharp.referencesCodeLens.enabled": false,
-  "csharp.testsCodeLens.enabled": false,
   "editor.bracketPairColorization.enabled": false,
   "editor.cursorBlinking": "solid",
   "editor.fontFamily": "Source Code Pro",
@@ -88,12 +86,9 @@
   "vim.normalModeKeyBindings": [
     {
       "before": ["g", "t"],
-      "commands": [
-        "editor.action.goToTypeDefinition",
-      ],
+      "commands": ["editor.action.goToTypeDefinition"]
     }
   ],
-  "window.menuBarVisibility": "toggle",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.editor.enablePreview": false,
   "workbench.editorAssociations": {
@@ -106,8 +101,6 @@
   },
   "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
   "redhat.telemetry.enabled": false,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "Lua.telemetry.enable": false,
   "files.watcherExclude": {
     "**/.venv/*/**": true,
     "**/.bloop": true,
@@ -117,12 +110,12 @@
   "jupyter.askForKernelRestart": false,
   "gitlens.advanced.fileHistoryFollowsRenames": true,
   "python.analysis.autoFormatStrings": true,
-  "python.linting.maxNumberOfProblems": 30,
-  "gitlens.ai.experimental.provider": "openai",
-  "gitlens.ai.experimental.openai.model": "gpt-4-turbo-preview",
   "python.analysis.extraPaths": ["src/"],
   "terminal.integrated.showExitAlert": false,
-  "notebook.defaultFormatter": "ms-python.black-formatter",
+  "notebook.defaultFormatter": "charliermarsh.ruff",
   "notebook.formatOnSave.enabled": true,
-  "editor.lineNumbers": "on"
+  "editor.lineNumbers": "on",
+  "docker.extension.enableComposeLanguageServer": false,
+  "docker.extension.dockerEngineAvailabilityPrompt": false,
+  "autoDocstring.docstringFormat": "numpy-notypes"
 }

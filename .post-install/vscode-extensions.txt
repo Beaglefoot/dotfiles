@@ -1,5 +1,6 @@
 beaglefoot.awk-ide-vscode
 Braver.vscode-solarized
+charliermarsh.ruff
 dbaeumer.vscode-eslint
 deerawan.vscode-dash
 eamodio.gitlens
