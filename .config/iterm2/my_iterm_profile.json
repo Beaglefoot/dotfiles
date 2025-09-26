@@ -109,6 +109,13 @@
       "Action" : 10,
       "Text" : "[1;2H"
     },
+    "0xf702-0x300000-0x7b" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 10,
+      "Text" : "[H",
+      "Escaping" : 2
+    },
     "0xf72b-0x40000" : {
       "Action" : 10,
       "Text" : "[1;5F"
@@ -136,6 +143,13 @@
     "0x33-0x40000" : {
       "Action" : 11,
       "Text" : "0x1b"
+    },
+    "0xf703-0x300000-0x7c" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 10,
+      "Text" : "[F",
+      "Escaping" : 2
     },
     "0xf703-0x220000" : {
       "Action" : 10,
@@ -232,6 +246,13 @@
       "Action" : 11,
       "Text" : "0x1e"
     },
+    "0x2e-0x100000-0x2f" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 10,
+      "Text" : ".",
+      "Escaping" : 2
+    },
     "0x66-0x100000-0x3" : {
       "Version" : 2,
       "Apply Mode" : 0,
@@ -307,7 +328,7 @@
     "Blue Component" : 0.21176470588235294,
     "Green Component" : 0.20392156862745098
   },
-  "Silence Bell" : false,
+  "Silence Bell" : true,
   "Rows" : 25,
   "Guid" : "ADA2B4F7-8202-42A9-9249-47F5EBDACBD1",
   "Ansi 14 Color (Dark)" : {
@@ -491,7 +512,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.23660069704055786
   },
-  "Name" : "Default",
+  "Name" : "my_iterm_profile",
   "Transparency" : 0,
   "Horizontal Spacing" : 1,
   "Cursor Color (Dark)" : {
