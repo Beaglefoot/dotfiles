@@ -19,6 +19,7 @@ jq
 kafka
 kcat
 msgpack
+nbdime
 nginx
 node
 openjdk
@@ -26,6 +27,7 @@ openssl
 perl
 podman
 python
+rectangle
 ruby
 s3cmd
 sqlite
