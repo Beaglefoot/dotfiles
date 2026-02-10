@@ -34,6 +34,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     alias awk='gawk'
     alias sed='gsed'
 
+    if [[ $(command -v podman) ]]; then
+        alias docker='podman'
+    fi
+
     export HOMEBREW_NO_AUTO_UPDATE=1
 fi
 
