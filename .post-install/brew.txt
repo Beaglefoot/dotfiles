@@ -1,7 +1,6 @@
 awscli
 bash
 bash-completion
-cloc
 cmake
 coreutils
 dbeaver-community
@@ -13,6 +12,7 @@ gdk-pixbuf
 git
 glib
 gnu-sed
+htop
 httpie
 iterm2
 jq
@@ -20,8 +20,10 @@ kafka
 kcat
 msgpack
 nbdime
+netcat
 nginx
 node
+obsidian
 openjdk
 openssl
 perl
@@ -32,6 +34,7 @@ ruby
 s3cmd
 sqlite
 tmux
+tokei
 tree
 vim
 visual-studio-code
