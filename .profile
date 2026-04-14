@@ -60,3 +60,15 @@ my_scripts="$HOME/.scripts"
 if [[ -e "$my_scripts" && ! $PATH =~ "$my_scripts" ]]; then
     PATH="$my_scripts:$PATH"
 fi
+
+# Rust lang
+cargo_env="$HOME/.cargo/env"
+
+if [[ -e "$cargo_env" ]]; then
+    source "$cargo_env"
+fi
+
+# common .env vars
+if [[ -e "$HOME/.env" ]]; then
+    while read kvar; do export $kvar; done < "$HOME/.env"
+fi
