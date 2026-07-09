@@ -25,3 +25,5 @@ fi
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias clip='pbcopy'
 fi
+
+alias va='source .venv/bin/activate'

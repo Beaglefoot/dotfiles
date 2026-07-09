@@ -131,7 +131,7 @@ fi
 
 
 # Pipenv
-if [ $(which pipenv 2>/dev/null) ]; then
+if command -v pipenv &>/dev/null; then
     if [ ! -e ~/.bash_completions/pipenv-completion.bash ]; then
         pipenv --completion > ~/.bash_completions/pipenv-completion.bash
     fi
@@ -139,7 +139,7 @@ fi
 
 
 # Poetry
-if [ $(which poetry 2>/dev/null) ]; then
+if command -v poetry &>/dev/null; then
     if [ ! -e ~/.bash_completions/poetry-completion.bash ]; then
         poetry completions bash > ~/.bash_completions/poetry-completion.bash
     fi
@@ -150,6 +150,22 @@ fi
 if [ ! -e ~/.bash_completions/docker-compose-completion.bash ]; then
     wget https://raw.githubusercontent.com/docker/compose/master/contrib/completion/bash/docker-compose\
         -O ~/.bash_completions/docker-compose-completion.bash
+fi
+
+
+# kubectl
+if command -v kubectl &>/dev/null; then
+    if [ ! -e ~/.bash_completions/kubectl-completion.bash ]; then
+        kubectl completion bash > ~/.bash_completions/kubectl-completion.bash
+    fi
+fi
+
+
+# Zerobrew
+if command -v zb &>/dev/null; then
+    if [ ! -e ~/.bash_completions/zb-completion.bash ]; then
+        zb completion bash > ~/.bash_completions/zb-completion.bash
+    fi
 fi
 
 
