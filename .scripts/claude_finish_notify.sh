@@ -40,15 +40,26 @@ log() { printf '%s %s\n' "$(date +%H:%M:%S)" "$*" >> "$HOME/.scripts/claude_fini
 app=$(host_app)
 [ "$app" = "com.googlecode.iterm2" ] || { log "silent: host app ${app:-unknown}"; exit 0; }
 
-# The hook payload (transcript_path, session_id, ...) arrives on stdin and the
-# helper reads it from there. Exit 1 = tasks pending; anything else (0, or the
-# helper failing) falls through and notifies as before. Each Stop leaves one
-# line in claude_finish_notify.log saying what was decided and why.
-pending=$(python3 "$(dirname "$0")/claude_pending_tasks.py" 2>/dev/null)
-[ $? -eq 1 ] && { log "silent: pending $(printf '%s' "$pending" | tr '\n' ' ')"; exit 0; }
+# The hook payload (transcript_path, session_id, cwd, ...) arrives on stdin.
+# The project shown in the notification is the directory the session started
+# in: the transcript's own cwd field, because the payload's cwd follows cd
+# commands run by Bash tool calls. Several sessions share the log file, so
+# the project is on every line from here on.
+payload=$(cat)
+transcript=$(printf '%s' "$payload" | sed -n 's/.*"transcript_path":"\([^"]*\)".*/\1/p')
+project=$(grep -m1 -o '"cwd":"[^"]*"' "$transcript" 2>/dev/null | sed 's/^"cwd":"//; s/"$//')
+[ -n "$project" ] || project=$(printf '%s' "$payload" | sed -n 's/.*"cwd":"\([^"]*\)".*/\1/p')
+project=${project##*/}
+
+# Exit 1 = tasks pending; anything else (0, or the helper failing) falls
+# through and notifies as before. Each Stop leaves one line in the log saying
+# what was decided and why.
+pending=$(printf '%s' "$payload" | python3 "$(dirname "$0")/claude_pending_tasks.py" 2>/dev/null)
+[ $? -eq 1 ] && { log "[$project] silent: pending $(printf '%s' "$pending" | tr '\n' ' ')"; exit 0; }
 
 frontmost=$(osascript -e 'tell application "System Events" to get name of first application process whose frontmost is true' 2>/dev/null)
-log "idle, frontmost ${frontmost:-unknown}"
+log "[$project] idle, frontmost ${frontmost:-unknown}"
 if [ "$frontmost" != "iTerm2" ]; then
-  osascript -e 'display notification "Claude has finished" with title "Claude Code"'
+  subtitle=$(printf '%s' "$project" | sed 's/\\/\\\\/g; s/"/\\"/g')
+  osascript -e "display notification \"Claude has finished\" with title \"Claude Code\" subtitle \"$subtitle\""
 fi
