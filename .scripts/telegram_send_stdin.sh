@@ -12,10 +12,35 @@
 #   TELEGRAM_BOT_TOKEN  from @BotFather
 #   TELEGRAM_CHAT_ID    numeric chat id
 #
+# Both may also live in ~/.env as KEY=value lines (optional "export" prefix,
+# optional quotes, # comments). Variables already set in the environment take
+# precedence over ~/.env.
+#
 set -euo pipefail
 
-TELEGRAM_BOT_TOKEN="${TELEGRAM_BOT_TOKEN:?set TELEGRAM_BOT_TOKEN}"
-TELEGRAM_CHAT_ID="${TELEGRAM_CHAT_ID:?set TELEGRAM_CHAT_ID}"
+# Assign each KEY=value line of $1 to the shell variable KEY unless it is
+# already set. Lines that are not assignments (comments, blanks) are skipped.
+load_env_defaults() {
+  local file=$1 line key value
+  local re='^[[:space:]]*(export[[:space:]]+)?([A-Za-z_][A-Za-z0-9_]*)=(.*)$'
+  [[ -r "$file" ]] || return 0
+  while IFS= read -r line || [[ -n "$line" ]]; do
+    [[ "$line" =~ $re ]] || continue
+    key=${BASH_REMATCH[2]}
+    value=${BASH_REMATCH[3]}
+    case $value in
+      \"*\" | \'*\') value=${value#?}; value=${value%?} ;;
+    esac
+    if [[ -z "${!key:-}" ]]; then
+      printf -v "$key" '%s' "$value"
+    fi
+  done <"$file"
+}
+
+load_env_defaults "$HOME/.env"
+
+TELEGRAM_BOT_TOKEN="${TELEGRAM_BOT_TOKEN:?set TELEGRAM_BOT_TOKEN (env or ~/.env)}"
+TELEGRAM_CHAT_ID="${TELEGRAM_CHAT_ID:?set TELEGRAM_CHAT_ID (env or ~/.env)}"
 
 if ! command -v curl >/dev/null 2>&1; then
   echo "curl is required" >&2
