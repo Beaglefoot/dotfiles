@@ -67,7 +67,7 @@ else
   text="${full:0:prefix_len}${footer}"
 fi
 
-if ! curl -fsS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+if ! curl -fsS --connect-timeout 5 --max-time 10 -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
   --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
   --data-urlencode "text=${text}" >/dev/null; then
   echo "$(date -Iseconds) error: Telegram sendMessage failed" >&2
