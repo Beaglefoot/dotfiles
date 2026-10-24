@@ -62,13 +62,7 @@
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.indexing": true,
   "python.analysis.typeCheckingMode": "basic",
-  "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
-  "python.linting.ignorePatterns": [
-    ".vscode/*.py",
-    "**/site-packages/**/*.py",
-    ".venv/**/*.py"
-  ],
   "search.exclude": {
     "package-lock.json": true,
     "yarn.lock": true
@@ -91,14 +85,7 @@
   ],
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.editor.enablePreview": false,
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
-  },
   "workbench.startupEditor": "none",
-  "notebook.cellToolbarLocation": {
-    "default": "right",
-    "jupyter-notebook": "left"
-  },
   "workbench.colorTheme": "Braver's Solarized Light (themed workbench)",
   "redhat.telemetry.enabled": false,
   "files.watcherExclude": {
@@ -107,15 +94,11 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
-  "jupyter.askForKernelRestart": false,
   "gitlens.advanced.fileHistoryFollowsRenames": true,
   "python.analysis.autoFormatStrings": true,
-  "python.analysis.extraPaths": ["src/"],
   "terminal.integrated.showExitAlert": false,
-  "notebook.defaultFormatter": "charliermarsh.ruff",
-  "notebook.formatOnSave.enabled": true,
   "editor.lineNumbers": "on",
   "docker.extension.enableComposeLanguageServer": false,
   "docker.extension.dockerEngineAvailabilityPrompt": false,
-  "autoDocstring.docstringFormat": "numpy-notypes"
+  "python.defaultInterpreterPath": "/bin/python3"
 }
